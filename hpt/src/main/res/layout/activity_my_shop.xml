@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:hpt="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_lightgray"
+    tools:context=".ui.activity.MyShopActivity">
+
+    <com.queqianme.hpt.view.TitleBackView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        hpt:titleText="我的店铺" />
+
+    <com.queqianme.hpt.view.ScrollViewExtend
+        android:layout_width="match_parent"
+        android:layout_below="@id/title"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/my_shop_rl1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x220"
+                android:background="@color/text_write">
+
+                <com.queqianme.hpt.view.CircleImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="@dimen/x140"
+                    android:layout_height="@dimen/x140"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:src="@mipmap/head_icon100" />
+
+                <TextView
+                    android:id="@+id/shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:layout_marginTop="@dimen/x60"
+                    android:layout_toEndOf="@+id/imageView"
+                    android:text="血本无归的小店"
+                    android:textColor="@color/text_somber"
+                    android:textSize="@dimen/font_18" />
+
+                <LinearLayout
+                    android:id="@+id/ll2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shop_name"
+                    android:layout_marginTop="@dimen/x20"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x200"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/start_full" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/start_full" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/start_full" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/start_full" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/start_half" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        style="@style/text_666"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_toRightOf="@id/ll1"
+                        android:background="@drawable/bg_lv"
+                        android:maxLength="10"
+                        android:paddingLeft="@dimen/x8"
+                        android:paddingRight="@dimen/x8"
+                        android:text="LV.7"
+                        android:textColor="@color/theme_orange" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x22"
+                        android:layout_toRightOf="@id/tv3"
+                        android:src="@mipmap/company_icon" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:background="@color/line_lightgray" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/certification_bad"
+                style="@style/linear_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x80"
+                android:visibility="gone"
+                android:layout_below="@id/my_shop_rl1"
+                android:paddingLeft="@dimen/x30">
+
+                <ImageView
+                    android:layout_width="@dimen/x44"
+                    android:layout_height="@dimen/x44"
+                    android:src="@mipmap/certification_none" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:text="店铺认证不通过,请重新认证"
+                    android:textColor="@color/text_red"
+                    android:textSize="@dimen/font_14" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+
+                <ImageView
+                    android:layout_width="@dimen/x44"
+                    android:layout_height="@dimen/x44"
+                    android:layout_marginRight="@dimen/x30"
+                    android:src="@mipmap/arrow_right" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/certification_bad"
+                android:background="@color/line_lightgray" />
+
+            <View
+                android:id="@+id/line5"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/line4"
+                android:layout_marginTop="@dimen/x20"
+                android:background="@color/line_lightgray" />
+
+            <LinearLayout
+                android:id="@+id/my_shop_shouyi"
+                style="@style/linear_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x96"
+                android:layout_below="@id/line5"
+                android:paddingLeft="@dimen/x30">
+
+                <TextView
+                    style="@style/text_333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="今日收益额" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/text_666"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/x10"
+                    android:text="150" />
+
+                <ImageView
+                    android:layout_width="@dimen/x44"
+                    android:layout_height="@dimen/x44"
+                    android:layout_marginRight="@dimen/x30"
+                    android:src="@mipmap/arrow_right" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/my_shop_shouyi"
+                android:background="@color/line_lightgray" />
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/line2"
+                android:layout_marginTop="@dimen/x20"
+                android:background="@color/line_lightgray" />
+
+
+            <com.queqianme.hpt.view.ScrollGridView
+                android:id="@+id/my_shop_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line3"
+                android:background="@color/text_write"
+                android:numColumns="3"
+                android:stretchMode="columnWidth" />
+
+            <com.ab.view.sliding.AbSlidingPlayView
+                android:id="@+id/my_shop_ad"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x226"
+                android:layout_below="@id/my_shop_gridview"
+                android:layout_marginTop="@dimen/x20"/>
+
+        </RelativeLayout>
+    </com.queqianme.hpt.view.ScrollViewExtend>
+</RelativeLayout>

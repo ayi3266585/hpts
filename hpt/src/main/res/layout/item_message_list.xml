@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/x30"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/message_icon"
+        android:layout_width="@dimen/x150"
+        android:layout_margin="@dimen/x30"
+        android:layout_height="@dimen/x150"
+        android:src="@mipmap/head_icon140"/>
+
+    <TextView
+        android:id="@+id/message_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="消息标题"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/x40"
+        android:layout_toRightOf="@id/message_icon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="19:01"
+        android:layout_alignTop="@id/message_title"
+        android:layout_marginRight="@dimen/x30"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/x30"
+        android:layout_below="@+id/message_title"
+        android:lines="2"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_toRightOf="@id/message_icon"
+        android:text="显示小表弟,超过2行的话后面不显示超过2行的内容显示小表弟,超过2行的话后面不显示超过2行的内容显示小表弟,超过2行的话后面不显示超过2行的内容"/>
+
+</RelativeLayout>

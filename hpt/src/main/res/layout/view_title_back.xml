@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x88"
+    android:background="@color/base_somber" >
+
+    <RelativeLayout
+        android:id="@+id/title_back"
+        android:layout_width="@dimen/x88"
+        android:layout_height="@dimen/x88" >
+
+        <ImageView
+            android:layout_width="@dimen/x34"
+            android:layout_height="@dimen/x34"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/arrow_left" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/title_text"
+        android:text="标题"
+        style="@style/title_text"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x88"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hpt="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_lightgray"
+    tools:context=".ui.activity.PublishPersonActivity">
+
+    <com.queqianme.hpt.view.TitleBackView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        hpt:titleText="个人信息" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_lightgray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x88"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x30">
+
+                <TextView
+                    style="@style/text_666"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="居住地址" />
+
+                <com.queqianme.hpt.view.EditTextWithDel
+                    style="@style/did_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:hint="请输入" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_lightgray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x88"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x30">
+
+                <TextView
+                    style="@style/text_666"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="详细地址" />
+
+                <com.queqianme.hpt.view.EditTextWithDel
+                    style="@style/did_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:hint="请输入" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x30"
+                android:background="@color/line_lightgray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x88"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x30">
+
+                <TextView
+                    style="@style/text_666"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="QQ号码" />
+
+                <com.queqianme.hpt.view.EditTextWithDel
+                    style="@style/did_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:hint="请输入" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_lightgray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x88"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x30">
+
+                <TextView
+                    style="@style/text_666"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="微信号码" />
+
+                <com.queqianme.hpt.view.EditTextWithDel
+                    style="@style/did_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:hint="请输入" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x50"
+                android:background="@color/line_lightgray"
+                android:gravity="bottom"
+                android:paddingLeft="@dimen/x30"
+                android:text="亲属联系人" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x88"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x30">
+
+                <TextView
+                    style="@style/text_666"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="请选择关系" />
+
+                <com.queqianme.hpt.view.EditTextWithDel
+                    style="@style/did_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:hint="请输入" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_lightgray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x88"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x30">
+
+                <TextView
+                    style="@style/text_666"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="关系人姓名" />
+
+                <com.queqianme.hpt.view.EditTextWithDel
+                    style="@style/did_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:hint="请输入" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_lightgray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x88"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x30">
+
+                <TextView
+                    style="@style/text_666"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="电话号码" />
+
+                <com.queqianme.hpt.view.EditTextWithDel
+                    style="@style/did_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:hint="请输入" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x50"
+                android:background="@color/line_lightgray"
+                android:gravity="bottom"
+                android:paddingLeft="@dimen/x30"
+                android:text="朋友联系人" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x88"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x30">
+
+                <TextView
+                    style="@style/text_666"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="请选择关系" />
+
+                <com.queqianme.hpt.view.EditTextWithDel
+                    style="@style/did_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:hint="请输入" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_lightgray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x88"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x30">
+
+                <TextView
+                    style="@style/text_666"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="关系人姓名" />
+
+                <com.queqianme.hpt.view.EditTextWithDel
+                    style="@style/did_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:hint="请输入" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_lightgray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x88"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x30">
+
+                <TextView
+                    style="@style/text_666"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="电话号码" />
+
+                <com.queqianme.hpt.view.EditTextWithDel
+                    style="@style/did_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:hint="请输入" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_lightgray" />
+            <Button
+                android:id="@+id/submit"
+                style="@style/submit_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x88"
+                android:layout_marginTop="@dimen/x38"
+                android:enabled="false"
+                android:text="完成,下一步" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

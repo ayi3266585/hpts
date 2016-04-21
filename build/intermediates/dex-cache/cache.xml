@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.2.1_6976262838dcdfa0052557cfe07afefc29b1ddb8/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/libs/andbase.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="574b52ea55661d1b33a13941a324c2a974bf1860">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/2/andbase_cc6c6cbf4cec87dc38db7925eb11e21c8f35c76b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.2.1_e162ed3f46cd9aa2cc915ac8206ff865a8fab0e0/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/libs/eventbus.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3beef509ffb015c3f50ec2c0d388a080dd14ac46">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/2/eventbus_f2571c7f776c55d9f72a117aa3f3ad98bc06a4b1/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/libs/okhttp/okio-1.6.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/2/okio-1.6.0_d8a25b8887b1340d3391e50f6cdefbc7872400a2/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/exploded-aar/com.android.support/design/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.2.1_15a8df963d40173b4c112a50dc84a72ce4ba4046/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/libs/okhttp/okhttp-3.1.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="7052283359001bb108753cb0583a887d3bf94c82">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/2/okhttp-3.1.2_e2c33f4e727750c7940116b680b57a4db77c5bc3/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SDK/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.2.1_9b2a85e383812aca148256aeec897b0c293ef0ab/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.2.1_4f587b44b718662d67eb34bd154ffc1261af1956/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/libs/okhttp/ToolsFinal-1.1.4-release.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="04bf7267cdce4307f1397d985a79b404e26bb98b">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/2/ToolsFinal-1.1.4-release_b88b81867fa4bff24af7cf71b5778ae5fcf682b9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.2.1_fb2f194c32db03e6ce36e2554d4e810677e59090/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a52e3e26692069aa15f64ba5cf1a3d2e12db1cbd">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_91dea03f1faa0bc3c688931ae8bb84e2d6e5705c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/libs/okhttp/fastjson-1.1.46.android.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="108717c93f7aec31fb86db57cb4ad1e26034c638">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/2/fastjson-1.1.46.android_e6d1d8a24bc4d4f4e360f546f51fb1c58916eed5/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.2.1_2bc4f5bb156f98a72f634d56bd3abb60e245c367/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/libs/glide-3.6.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="86b122e640af09b0723e1fa44083c354ba6d9089">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/2/glide-3.6.1_652f7c596cdb6432d01689b2e50354b92f5755ea/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/libs/okhttp/OkHttpFinal-2.0.3.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="0389a0ced9a555dd4f094c0dc1929006519a811a">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/2/OkHttpFinal-2.0.3_cc1943e3d3beeb9f3790f7591cefebd699e919e9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="987cc68aedb31b5485bf89172ccd99fa07a6c4b0">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a8f34116b9e981c4de51205a46af6be8f3d3cec4/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/libs/butterknife-7.0.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/2/butterknife-7.0.1_8829e8f75a8fabc6b7fe6c242b718bbc2dd6446c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/exploded-aar/com.bugtags.library/bugtags-lib/1.2.4/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="19ca3bef5b6bc14e94676ea9d952f4845cdc6d65">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/10/com.bugtags.library-bugtags-lib-1.2.4_3a219222b13d1438d761978db45de91d78543908/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/libs/universal-image-loader-1.9.5.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/2/universal-image-loader-1.9.5_d6cb0d1477a29e59c0aee97b62359ddaf6882e85/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="/Users/zhaojiayu/Documents/SVN/HPT_SL/hpt/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.2.1_29cea0748fe9a7fa55e925b1f928dee53545c407/classes.dex" />
+    </item>
+
+</items>

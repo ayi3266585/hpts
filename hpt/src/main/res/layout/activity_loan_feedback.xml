@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/base_lightgray"
+    tools:context="com.queqianme.hpt.ui.activity.LoanFeedbackActivity">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:text="支付详情"
+        style="@style/title_text"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:background="@color/base_somber"
+        android:layout_height="@dimen/x88"/>
+
+
+    <com.queqianme.hpt.view.CircleImageView
+        android:id="@+id/login_head"
+        android:layout_width="@dimen/x200"
+        android:layout_height="@dimen/x200"
+        android:layout_marginTop="@dimen/x88"
+        android:src="@mipmap/head_icon140" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="支付成功"
+        android:textSize="20sp"
+        android:layout_marginTop="@dimen/x30"
+        android:gravity="center"
+        android:layout_height="@dimen/x88" />
+
+
+    <TextView
+        android:layout_width="260dp"
+        android:layout_marginTop="@dimen/x30"
+        android:text="金额将会在2个小时内转到对方账户上，请耐心等待"
+        android:layout_height="@dimen/x88" />
+
+
+    <Button
+        android:id="@+id/loan_feedback_submit"
+        style="@style/submit_bg"
+        android:layout_width="260dp"
+        android:layout_height="@dimen/x88"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/x58"
+        android:enabled="false"
+        android:text="确定" />
+
+
+</LinearLayout>

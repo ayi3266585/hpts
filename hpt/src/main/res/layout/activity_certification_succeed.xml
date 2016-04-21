@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_lightgray"
+    tools:context=".ui.activity.CertificationSucceedActivity">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:background="@color/base_somber"
+        android:gravity="center"
+        android:text="提交成功" />
+
+    <ImageView
+        android:id="@+id/certification_img"
+        android:layout_width="@dimen/x140"
+        android:layout_height="@dimen/x140"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x400"
+        android:src="@mipmap/post_success" />
+
+    <TextView
+        android:id="@+id/certification_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/certification_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x30"
+        android:text="审核中"
+        android:textColor="@color/base_somber"
+        android:textSize="@dimen/font_18" />
+
+    <TextView
+        android:id="@+id/certification_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/certification_tv1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x30"
+        android:text="您的申请已提交成功,我们的工作人员\n将于2个工作日内进行认真审核"
+        android:textColor="@color/text_lightgray"
+        android:textSize="@dimen/font_16" />
+
+    <Button
+        android:id="@+id/certification_btn"
+        style="@style/submit_btn"
+        android:layout_width="@dimen/x550"
+        android:layout_height="@dimen/x88"
+        android:layout_below="@id/certification_tv2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x50"
+        android:text="确定"
+        android:textColor="@color/text_write" />
+
+</RelativeLayout>

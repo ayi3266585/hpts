@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+
+    <!-- 颜色规范 -->
+    <!-- 主题色 -->
+    <!-- RGB(255 133 0) -->
+    <color name="theme_orange">#ffbd5f</color>
+    <!-- RGB(153 153 153) -->
+    <color name="theme_darkorange">#ff945f</color>
+    <color name="theme_red">#ff5f5f</color>
+
+    <!-- 基础色 -->
+    <!-- RGB(60 68 85) -->
+    <color name="base_somber">#143e6e</color>
+    <!-- RGB(245 245 249) -->
+    <color name="base_lightgray">#f2f4f4</color>
+
+    <!-- 线条颜色 -->
+    <!-- RGB(229 229 229) -->
+    <color name="line_lightgray">#e8ecec</color>
+    <!-- RGB(139 139 139) -->
+    <color name="line_darkgrey">#8b8b8b</color>
+    <!-- RGB(255 175 103) -->
+    <color name="line_orange">#ffaf67</color>
+
+    <!-- 文字颜色 -->
+    <!-- RGB(51 51 51) -->
+    <color name="text_somber">#333333</color>
+    <!-- RGB(102 102 102) -->
+    <color name="text_darkgrey">#666666</color>
+    <!-- RGB(153 153 153) -->
+    <color name="text_lightgray">#999999</color>
+    <!-- RGB(204 204 204) -->
+    <color name="text_gray">#999999</color>
+    <!-- RGB(0 150 255) -->
+    <color name="text_blue">#0096ff</color>
+    <!-- RGB(255 133 0) -->
+    <color name="text_orange">#f3c649</color>
+    <!-- RGB(255 255 255) -->
+    <color name="text_write">#ffffff</color>
+    <!-- RGB(255 68 68) -->
+    <color name="text_red">#ff5555</color>
+    <!-- RGB(51 204 51) -->
+    <color name="text_green">#33cc33</color>
+    <color name="text_hint">#cccccc</color>
+    <color name="btn_hint">#50ffffff</color>
+    <color name="cer_ing">#67748c</color>
+
+    <!-- 空 -->
+    <color name="bg_none">#00000000</color>
+
+    <!-- 自定义下拉弹框 -->
+    <color name="gray">#cccccc</color>
+    <color name="drop_down_selected">#f3c649</color>
+    <color name="drop_down_unselected">#111111</color>
+    <color name="mask_color">#88888888</color>
+    <color name="check_bg">#f2f2f2</color>
+    <color name="un_press_color">#9C27B0</color>
+
+    <!-- 自定义IOS弹框 -->
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+
+</resources>

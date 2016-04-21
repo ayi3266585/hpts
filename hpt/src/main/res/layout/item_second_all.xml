@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x270"
+        android:background="@color/text_write">
+
+        <ImageView
+            android:id="@+id/head_img"
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/x100"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginTop="@dimen/x45"
+            android:src="@mipmap/head_icon100" />
+
+        <TextView
+            android:id="@id/tv1"
+            style="@style/text_333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x160"
+            android:layout_marginTop="@dimen/x37"
+            android:maxLength="10"
+            android:text="血本无归的小店" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginTop="@dimen/x40"
+            android:layout_toRightOf="@id/tv1"
+            android:src="@mipmap/persion_icon" />
+
+        <TextView
+            android:id="@id/tv2"
+            style="@style/text_666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv1"
+            android:layout_marginLeft="@dimen/x160"
+            android:layout_marginTop="@dimen/x20"
+            android:maxLength="10"
+            android:text="王小米" />
+
+        <TextView
+            android:id="@id/tv3"
+            style="@style/text_666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv1"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_toRightOf="@id/tv2"
+            android:background="@drawable/bg_lv"
+            android:maxLength="10"
+            android:paddingLeft="@dimen/x8"
+            android:paddingRight="@dimen/x8"
+            android:text="LV.7"
+            android:textColor="@color/theme_orange" />
+
+        <LinearLayout
+            android:id="@id/ll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv2"
+            android:layout_marginLeft="@dimen/x160"
+            android:layout_marginTop="@dimen/x10"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/start_full" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/start_full" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/start_full" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/start_full" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/start_half" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv4"
+            style="@style/text_999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv2"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginTop="@dimen/x5"
+            android:layout_toRightOf="@id/ll1"
+            android:text="140笔" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_lightgray"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_below="@id/tv4"
+            />
+        <TextView
+            style="@style/text_999"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_below="@id/line1"
+            android:text="待售商品: ¥1000,¥1000,¥1000,¥1000,¥1000,¥1000,¥1000,¥1000"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+</FrameLayout>

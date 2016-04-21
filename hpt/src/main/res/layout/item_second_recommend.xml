@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/text_write">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x200">
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_lightgray" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x140"
+            android:layout_below="@id/tv1"
+            android:layout_marginLeft="@dimen/x40"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="¥"
+            android:textColor="@color/text_orange"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x130"
+            android:layout_marginLeft="@dimen/x5"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/tv1"
+            android:gravity="center"
+            android:text="2000"
+            android:textColor="@color/text_orange"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/tv3"
+            style="@style/text_999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv2"
+            android:layout_marginLeft="@dimen/x40"
+            android:text="剩余数量: "
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/tv4"
+            style="@style/text_999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv2"
+            android:layout_toRightOf="@id/tv3"
+            android:text="0"
+            android:textSize="@dimen/font_14" />
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x130"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_toRightOf="@id/tv4"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/text_666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="利息"
+                android:textSize="@dimen/font_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x15"
+                android:text="15%"
+                android:textColor="@color/theme_darkorange"
+                android:textSize="@dimen/font_18" />
+
+            <TextView
+                style="@style/text_666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x25"
+                android:text="滞纳金" />
+
+            <TextView
+                style="@style/text_666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x10"
+                android:text="15%" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x25"
+                android:src="@mipmap/persion_icon" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv7"
+            style="@style/text_999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/ll1"
+            android:layout_below="@id/ll1"
+            android:text="可选周期:" />
+
+        <TextView
+            android:id="@+id/tv8"
+            style="@style/text_999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll1"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_toRightOf="@id/tv7"
+            android:text="1/3/4/5/6(每期20天)" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/x50"
+            android:background="@color/line_lightgray"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+</FrameLayout>

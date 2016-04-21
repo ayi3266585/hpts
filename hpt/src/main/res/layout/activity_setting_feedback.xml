@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hpt="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_lightgray"
+    android:orientation="vertical"
+    tools:context="com.queqianme.hpt.ui.activity.SettingFeedbackActivity">
+
+    <com.queqianme.hpt.view.TitleBackView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        hpt:titleText="意见反馈" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/x30"
+        android:text="请选择反馈类型" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x30"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="错误反馈" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="产品优化" />
+    </RadioGroup>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/x30"
+        android:layout_height="150dp">
+
+        <EditText
+            android:id="@+id/feedback_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|top"
+            android:hint="您的宝贵意见是我们前进的动力~(200字内)"
+            android:inputType="textMultiLine"
+            android:maxLength="200"
+            android:minLines="6"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/feedback_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/x10"
+            android:layout_toLeftOf="@+id/feedback_num200"
+            android:text="200"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/feedback_num200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/x10"
+            android:layout_marginRight="@dimen/x10"
+            android:text="/200"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:hint="请留下您的联系方式: QQ/邮箱/电话号码"
+        android:textSize="14sp" />
+
+    <Button
+        style="@style/submit_btn"
+        android:layout_width="match_parent"
+        android:text="提交"
+        android:layout_marginTop="50dp"
+        android:layout_height="@dimen/x88" />
+</LinearLayout>

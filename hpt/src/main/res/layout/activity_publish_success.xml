@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.queqianme.hpt.ui.activity.PublishSuccessActivity">
+
+    <TextView
+        style="@style/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:background="@color/base_somber"
+        android:gravity="center"
+        android:text="发布成功" />
+
+    <ImageView
+        android:layout_width="@dimen/x200"
+        android:layout_height="@dimen/x200"
+        android:layout_above="@+id/tv1"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/head_icon140" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/x20"
+        android:text="发布成功"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x20"
+        android:ems="14"
+        android:text="你的借条已经发布成功,请您留意后续的借款通知哦~"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/submit"
+        style="@style/submit_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:layout_below="@id/tv2"
+        android:layout_marginLeft="@dimen/x80"
+        android:layout_marginRight="@dimen/x80"
+        android:layout_marginTop="@dimen/x50"
+        android:text="确定"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

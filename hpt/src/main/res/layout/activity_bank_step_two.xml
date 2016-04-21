@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hpt="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_lightgray"
+    tools:context="com.queqianme.hpt.ui.activity.BankStepTwoActivity">
+
+    <com.queqianme.hpt.view.TitleBackView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        hpt:titleText="输入手机号" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="@dimen/x55"
+        android:background="@color/text_write"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x96"
+            android:layout_marginLeft="@dimen/x30"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/did_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="银行    " />
+
+            <TextView
+                android:id="@+id/cardName"
+                style="@style/text_333"
+                android:layout_width="0dp"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_weight="4.5"
+                android:drawableLeft="@mipmap/certification_none"
+                android:text="交通银行" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/x30"
+            android:background="@color/line_lightgray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x96"
+            android:layout_marginLeft="@dimen/x30"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/did_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="手机号" />
+
+            <com.queqianme.hpt.view.EditTextWithDel
+                android:id="@+id/cardPhone"
+                style="@style/did_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4.5"
+                android:hint="请输入银行预留手机号"
+                android:inputType="textPassword"
+                android:maxLength="20" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/bank_step2_next"
+        style="@style/submit_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/x58"
+        android:text="下一步" />
+</RelativeLayout>

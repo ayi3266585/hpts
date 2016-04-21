@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hpt="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_lightgray"
+    android:orientation="vertical"
+    tools:context=".ui.activity.LoanPhoneCodeActivity">
+
+    <com.queqianme.hpt.view.TitleBackView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        hpt:titleText="手机验证" />
+
+    <TextView
+        android:id="@+id/loan_phone_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x96"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x30"
+        android:paddingRight="@dimen/x30"
+        android:text="支付验证码已发送至138*****567的手机号，请输入验证码完成支付" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x96"
+        android:layout_marginTop="@dimen/x30"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x30">
+
+        <TextView
+            style="@style/did_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="手机号" />
+
+        <com.queqianme.hpt.view.EditTextWithDel
+            android:id="@+id/loan_phone_phone"
+            style="@style/did_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:hint="请输入您的手机号码"
+            android:maxLength="11" />
+
+        <com.queqianme.hpt.view.TimeButton
+            android:id="@+id/register_auth_code"
+            style="@style/auth_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x68"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_weight="1.8"
+            android:paddingLeft="@dimen/x15"
+            android:paddingRight="@dimen/x15"
+            android:text="获取验证码"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loan_phone_submit"
+        style="@style/submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:layout_marginTop="@dimen/x30"
+        android:text="完成支付" />
+
+
+</LinearLayout>
