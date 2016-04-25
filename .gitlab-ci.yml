@@ -4,9 +4,9 @@ build:
   script:
     - sed -i '/distributionUrl/c\distributionUrl=file\:\/\/\/opt\/gradle/gradle-2.10-all.zip' gradle/wrapper/gradle-wrapper.properties
     - sed -i '/sdk\.dir/c\sdk.dir=\/opt\/android-sdk-linux\/' local.properties
-    - fir build_apk -B master -o output -f appdebug -n appdebug -s qqmshanghuAndroidDebug -p
-    - fir build_apk -B master -o output -f apptest -n apptest -s qqmshanghuAndroidTest -p
-    - fir build_apk -B master -o output -f apprelease -n apprelease -s qqmshanghuAndroidRelease -p
+    - fir build_apk -B master -o output -f appdebug -n appdebug -s hptslAndroidDebug -p
+    - fir build_apk -B master -o output -f apptest -n apptest -s hptslAndroidTest -p
+    - fir build_apk -B master -o output -f apprelease -n apprelease -s hptslAndroidRelease -p
   artifacts:
     paths:
       - output
