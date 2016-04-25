@@ -18,7 +18,9 @@ android {
         appdebug {
             //这里可以配置不同的包名
             applicationId="com.queqianme.hpt.debug"
+            //这里配置应用名
             resValue "string","app_name","HPT内网版"
+            //自定义参数用于判断版本设置服务器IP
             buildConfigField "String", "BUILD_VERSION", "\"debug\""
             manifestPlaceholders = [ version:"appdebug" ]
         }
