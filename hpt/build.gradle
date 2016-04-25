@@ -18,14 +18,21 @@ android {
         appdebug {
             //这里可以配置不同的包名
             applicationId="com.queqianme.hpt.debug"
+            resValue "string","app_name","HPT内网版"
+            buildConfigField "String", "BUILD_VERSION", "\"debug\""
             manifestPlaceholders = [ version:"appdebug" ]
         }
         apprelease {
             applicationId="com.queqianme.hpt.release"
+            resValue "string","app_name","HPT发布版"
+            buildConfigField "String", "BUILD_VERSION", "\"release\""
             manifestPlaceholders = [ version:"apprelease" ]
         }
+
         apptest {
             applicationId="com.queqianme.hpt.apptest"
+            resValue "string","app_name","HPT测试版"
+            buildConfigField "String", "BUILD_VERSION", "\"apptest\""
             manifestPlaceholders = [ version:"apptest" ]
         }
 
@@ -47,18 +54,9 @@ android {
         release {
             // 移除无用的resource文件
             shrinkResources true
-            buildConfigField "String", "BUILD_VERSION", "\"release\""
             minifyEnabled true //混淆
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             //混淆路径
-        }
-
-        debug{
-            buildConfigField "String", "BUILD_VERSION", "\"debug\""
-            minifyEnabled true //混淆
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            //混淆路径
-
         }
 
     }

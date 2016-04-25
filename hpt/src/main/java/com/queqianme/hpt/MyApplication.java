@@ -30,11 +30,12 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-
         if (BuildConfig.BUILD_VERSION.equals("debug")) {
             HttpURL.IP = "http://192.168.1.140:8082";
         } else if (BuildConfig.BUILD_VERSION.equals("release")) {
             HttpURL.IP = "http://192.168.1.140:8083";
+        }else if (BuildConfig.BUILD_VERSION.equals("apptest")) {
+            HttpURL.IP = "http://192.168.1.140:8084";
         }
 
         //初始化Bugtags
