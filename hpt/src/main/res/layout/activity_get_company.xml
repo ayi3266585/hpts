@@ -8,7 +8,6 @@
     tools:context="com.queqianme.hpt.ui.activity.GetCompanyActivity">
 
     <com.queqianme.hpt.view.TitleBackView
-        android:layout_below="@id/title_line"
         android:id="@+id/title"
         android:layout_width="match_parent"
         hpt:titleText="企业认证"

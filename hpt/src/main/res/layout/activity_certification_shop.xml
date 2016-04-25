@@ -9,7 +9,7 @@
     tools:context=".ui.activity.CertificationShopActivity">
 
     <com.queqianme.hpt.view.TitleBackView
-        android:id="@+id/title"
+        android:id="@+id/shop_title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x88"
         hpt:titleText="创建店铺" />
@@ -18,7 +18,7 @@
         android:id="@+id/shop_certification_tv1"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/x80"
-        android:layout_below="@id/title"
+        android:layout_below="@id/shop_title"
         android:layout_marginLeft="@dimen/x30"
         android:gravity="center"
         android:text="选择店铺的规模"

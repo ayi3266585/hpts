@@ -11,7 +11,6 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x88"
-        android:layout_below="@id/title_line"
         hpt:titleText="消息中心" />
 
     <TextView

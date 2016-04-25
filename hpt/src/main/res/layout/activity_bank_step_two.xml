@@ -9,7 +9,6 @@
     tools:context="com.queqianme.hpt.ui.activity.BankStepTwoActivity">
 
     <com.queqianme.hpt.view.TitleBackView
-        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x88"
         hpt:titleText="输入手机号" />

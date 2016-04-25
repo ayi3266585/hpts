@@ -9,7 +9,6 @@
     tools:context=".ui.activity.BankStepOneActivity">
 
     <com.queqianme.hpt.view.TitleBackView
-        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x88"
         hpt:titleText="添加银行卡" />

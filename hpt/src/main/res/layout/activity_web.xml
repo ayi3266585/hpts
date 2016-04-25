@@ -7,7 +7,6 @@
     tools:context="com.queqianme.hpt.ui.activity.WebActivity">
 
     <com.queqianme.hpt.view.TitleBackView
-        android:layout_below="@id/title_line"
         android:id="@+id/title"
         hpt:titleText="标题"
         android:layout_width="match_parent"
