@@ -7,6 +7,30 @@ android {
     compileSdkVersion 23    //sdk版本
     buildToolsVersion '23.0.2'  //buildTools版本
 
+    lintOptions {
+        abortOnError false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+
+    productFlavors {
+
+        appdebug {
+            //这里可以配置不同的包名
+            applicationId="com.queqianme.hpt.debug"
+            manifestPlaceholders = [ version:"appdebug" ]
+        }
+        apprelease {
+            applicationId="com.queqianme.hpt.release"
+            manifestPlaceholders = [ version:"apprelease" ]
+        }
+        apptest {
+            applicationId="com.queqianme.hpt.apptest"
+            manifestPlaceholders = [ version:"apptest" ]
+        }
+
+    }
+
     //默认配置，会同时应用到debug和release版本上
     defaultConfig {
         applicationId "com.queqianme.hpt"   //包名
@@ -30,7 +54,6 @@ android {
         }
 
         debug{
-
             buildConfigField "String", "BUILD_VERSION", "\"debug\""
             minifyEnabled true //混淆
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
