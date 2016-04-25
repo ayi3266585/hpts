@@ -1,1 +1,1 @@
-include ':hpt', ':app'
+include ':hpt'
