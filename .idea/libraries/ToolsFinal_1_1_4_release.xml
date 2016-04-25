@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ToolsFinal-1.1.4-release">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/hpt/libs/okhttp/ToolsFinal-1.1.4-release.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
