@@ -84,7 +84,7 @@
 
 -dontwarn com.nostra13.universalimageloader.**
 
--keep class com.nostra13.universalimageloader.** { *; }
+-keep class universal-image-loader-1.9.5.** { *; }
 
 #Bugtags 混淆
 -keepattributes LineNumberTable,SourceFile
@@ -122,29 +122,7 @@
 -keep public class * extends android.app.Fragment
 # 保持自定义控件类不被混淆
 
--keep public class * extends com.zhibaicc.android.adapter.PackageAdapter
 
--keepclasseswithmembers class * {
-
-    public <init>(android.content.Context, android.util.AttributeSet);
-
-}
-
--keepclasseswithmembers class * {
-
-    public <init>(android.content.Context, android.util.AttributeSet, int);
-
-}
-
--keepclassmembers class * implements android.os.Parcelable {
-
-    static android.os.Parcelable$Creator CREATOR;
-
-}
-
--keep public class * implements java.io.Serializable {
-
-        public *;
-
-}
-
+-keep class com.ab.**{*;}
+-dontwarn com.ab.**
+-keep class glide-3.6.1.**{*;}
