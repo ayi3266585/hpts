@@ -8,15 +8,18 @@
     tools:context=".ui.activity.PublishPersonActivity">
 
     <com.queqianme.hpt.view.TitleBackView
-        android:id="@+id/title"
+        android:id="@+id/publish_person_title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x88"
+        android:focusableInTouchMode="true"
         hpt:titleText="个人信息" />
 
     <ScrollView
+        android:id="@+id/publish_person_scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title">
+        android:layout_below="@id/publish_person_title"
+        android:layout_marginTop="@dimen/x20">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,7 +29,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.5dp"
+                android:layout_height="@dimen/x1"
                 android:background="@color/line_lightgray" />
 
             <LinearLayout
@@ -43,17 +46,23 @@
                     android:layout_weight="1.5"
                     android:text="居住地址" />
 
-                <com.queqianme.hpt.view.EditTextWithDel
-                    style="@style/did_edit"
+                <TextView
+                    style="@style/did_edit_right"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4.5"
-                    android:hint="请输入" />
+                    android:hint="选择居住地的省市区" />
+
+                <ImageView
+                    android:layout_width="@dimen/x44"
+                    android:layout_height="@dimen/x44"
+                    android:layout_marginRight="@dimen/x30"
+                    android:src="@mipmap/arrow_right" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.5dp"
+                android:layout_height="@dimen/x1"
                 android:background="@color/line_lightgray" />
 
             <LinearLayout
@@ -71,17 +80,18 @@
                     android:text="详细地址" />
 
                 <com.queqianme.hpt.view.EditTextWithDel
-                    style="@style/did_edit"
+                    style="@style/did_edit_right"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/x30"
                     android:layout_weight="4.5"
-                    android:hint="请输入" />
+                    android:hint="请输入街道后的详细地址" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x30"
-                android:background="@color/line_lightgray" />
+                android:layout_height="@dimen/x20"
+                android:background="@color/base_lightgray" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -98,16 +108,16 @@
                     android:text="QQ号码" />
 
                 <com.queqianme.hpt.view.EditTextWithDel
-                    style="@style/did_edit"
+                    style="@style/did_edit_right"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4.5"
-                    android:hint="请输入" />
+                    android:layout_marginRight="@dimen/x30"
+                    android:layout_weight="4.5" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.5dp"
+                android:layout_height="@dimen/x1"
                 android:background="@color/line_lightgray" />
 
             <LinearLayout
@@ -125,20 +135,16 @@
                     android:text="微信号码" />
 
                 <com.queqianme.hpt.view.EditTextWithDel
-                    style="@style/did_edit"
+                    style="@style/did_edit_right"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4.5"
-                    android:hint="请输入" />
+                    android:layout_weight="4.5" />
             </LinearLayout>
 
-            <TextView
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x50"
-                android:background="@color/line_lightgray"
-                android:gravity="bottom"
-                android:paddingLeft="@dimen/x30"
-                android:text="亲属联系人" />
+                android:layout_height="@dimen/x20"
+                android:background="@color/base_lightgray" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -154,17 +160,23 @@
                     android:layout_weight="1.5"
                     android:text="请选择关系" />
 
-                <com.queqianme.hpt.view.EditTextWithDel
-                    style="@style/did_edit"
+                <TextView
+                    style="@style/did_edit_right"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4.5"
-                    android:hint="请输入" />
+                    android:hint="请选择关系" />
+
+                <ImageView
+                    android:layout_width="@dimen/x44"
+                    android:layout_height="@dimen/x44"
+                    android:layout_marginRight="@dimen/x30"
+                    android:src="@mipmap/arrow_right" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.5dp"
+                android:layout_height="@dimen/x1"
                 android:background="@color/line_lightgray" />
 
             <LinearLayout
@@ -182,16 +194,16 @@
                     android:text="关系人姓名" />
 
                 <com.queqianme.hpt.view.EditTextWithDel
-                    style="@style/did_edit"
+                    style="@style/did_edit_right"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4.5"
-                    android:hint="请输入" />
+                    android:layout_marginRight="@dimen/x30"
+                    android:layout_weight="4.5" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.5dp"
+                android:layout_height="@dimen/x1"
                 android:background="@color/line_lightgray" />
 
             <LinearLayout
@@ -209,20 +221,17 @@
                     android:text="电话号码" />
 
                 <com.queqianme.hpt.view.EditTextWithDel
-                    style="@style/did_edit"
+                    style="@style/did_edit_right"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4.5"
-                    android:hint="请输入" />
+                    android:layout_marginRight="@dimen/x30"
+                    android:layout_weight="4.5" />
             </LinearLayout>
 
-            <TextView
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x50"
-                android:background="@color/line_lightgray"
-                android:gravity="bottom"
-                android:paddingLeft="@dimen/x30"
-                android:text="朋友联系人" />
+                android:layout_height="@dimen/x20"
+                android:background="@color/base_lightgray" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -238,17 +247,23 @@
                     android:layout_weight="1.5"
                     android:text="请选择关系" />
 
-                <com.queqianme.hpt.view.EditTextWithDel
-                    style="@style/did_edit"
+                <TextView
+                    style="@style/did_edit_right"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4.5"
-                    android:hint="请输入" />
+                    android:hint="请选择关系" />
+
+                <ImageView
+                    android:layout_width="@dimen/x44"
+                    android:layout_height="@dimen/x44"
+                    android:layout_marginRight="@dimen/x30"
+                    android:src="@mipmap/arrow_right" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.5dp"
+                android:layout_height="@dimen/x1"
                 android:background="@color/line_lightgray" />
 
             <LinearLayout
@@ -266,16 +281,16 @@
                     android:text="关系人姓名" />
 
                 <com.queqianme.hpt.view.EditTextWithDel
-                    style="@style/did_edit"
+                    style="@style/did_edit_right"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4.5"
-                    android:hint="请输入" />
+                    android:layout_marginRight="@dimen/x30"
+                    android:layout_weight="4.5" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.5dp"
+                android:layout_height="@dimen/x1"
                 android:background="@color/line_lightgray" />
 
             <LinearLayout
@@ -293,25 +308,30 @@
                     android:text="电话号码" />
 
                 <com.queqianme.hpt.view.EditTextWithDel
-                    style="@style/did_edit"
+                    style="@style/did_edit_right"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4.5"
-                    android:hint="请输入" />
+                    android:layout_marginRight="@dimen/x30"
+                    android:layout_weight="4.5" />
             </LinearLayout>
 
-            <View
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/line_lightgray" />
-            <Button
-                android:id="@+id/submit"
-                style="@style/submit_bg"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/x88"
-                android:layout_marginTop="@dimen/x38"
-                android:enabled="false"
-                android:text="完成,下一步" />
+                android:layout_height="wrap_content"
+                android:background="@color/base_lightgray">
+
+                <Button
+                    android:id="@+id/publish_person_submit"
+                    style="@style/submit_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x88"
+                    android:layout_below="@id/publish_person_scroll"
+                    android:layout_marginBottom="@dimen/x20"
+                    android:layout_marginTop="@dimen/x38"
+                    android:enabled="false"
+                    android:text="下一步" />
+            </FrameLayout>
+
         </LinearLayout>
     </ScrollView>
 

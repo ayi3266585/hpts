@@ -6,10 +6,9 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 
-import com.ab.util.AbDialogUtil;
 import com.ab.util.AbToastUtil;
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseActivity;
+import com.queqianme.hpt.base.BaseActivity;
 import com.queqianme.hpt.net.UserInfo;
 import com.queqianme.hpt.utils.ActivityCollector;
 import com.queqianme.hpt.utils.HttpURL;
@@ -84,7 +83,6 @@ public class ChangeNameActivity extends BaseActivity {
      * 修改昵称
      */
     private void sendName() {
-        AbDialogUtil.showProgressDialog(this, 0, "提交中...");
         JSONObject object = new JSONObject();
         try {
             object.put("userId", SPUtils.get(this, "userId", 0L));
@@ -97,7 +95,6 @@ public class ChangeNameActivity extends BaseActivity {
         HttpRequest.post(HttpURL.editNickname, params, new BaseHttpRequestCallback<String>() {
             @Override
             protected void onSuccess(String s) {
-                AbDialogUtil.removeDialog(ChangeNameActivity.this);
                 try {
                     JSONObject responseJSON = new JSONObject(s);
                     int status = responseJSON.getInt("status");
@@ -119,7 +116,6 @@ public class ChangeNameActivity extends BaseActivity {
 
             @Override
             public void onFailure(int errorCode, String msg) {
-                AbDialogUtil.removeDialog(ChangeNameActivity.this);
                 AbToastUtil.showToast(ChangeNameActivity.this, R.string.http_failure);
             }
         });

@@ -6,11 +6,10 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
-import com.ab.util.AbDialogUtil;
 import com.ab.util.AbToastUtil;
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseActivity;
-import com.queqianme.hpt.bean.ValidatorEvent;
+import com.queqianme.hpt.base.BaseActivity;
+import com.queqianme.hpt.base.ValidatorEvent;
 import com.queqianme.hpt.utils.ActivityCollector;
 import com.queqianme.hpt.utils.EmptyValidator;
 import com.queqianme.hpt.utils.HttpURL;
@@ -128,7 +127,6 @@ public class ChangePasswordActivity extends BaseActivity {
 
     //提交新密码
     private void editPassword() {
-        AbDialogUtil.showProgressDialog(this, 0, "提交中...");
         JSONObject object = new JSONObject();
         try {
             object.put("userId", SPUtils.get(this, "userId", 0L));
@@ -164,7 +162,6 @@ public class ChangePasswordActivity extends BaseActivity {
 
             @Override
             public void onFailure(int errorCode, String msg) {
-                AbDialogUtil.removeDialog(ChangePasswordActivity.this);
                 AbToastUtil.showToast(ChangePasswordActivity.this, R.string.http_failure);
             }
         });

@@ -8,7 +8,7 @@ import android.os.Message;
 
 import com.ab.util.AbToastUtil;
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseActivity;
+import com.queqianme.hpt.base.BaseActivity;
 import com.queqianme.hpt.utils.HttpURL;
 import com.queqianme.hpt.utils.LogUtils;
 import com.queqianme.hpt.utils.SPUtils;
@@ -76,10 +76,6 @@ public class WelcomeActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-
-
-        ButterKnife.bind(this);
-        params = new RequestParams(this);
         init();
     }
 
@@ -87,8 +83,11 @@ public class WelcomeActivity extends BaseActivity {
      * 判断是否是第一次进入
      */
     private void init() {
+        ButterKnife.bind(this);
+        params = new RequestParams(this);
         SharedPreferences perPreferences = getSharedPreferences("login", MODE_PRIVATE);
         isFirstIn = perPreferences.getBoolean("isFirstIn", true);
+
         if (!isFirstIn) {
             mHandler.sendEmptyMessageDelayed(GO_HOME, TIME);
         } else {

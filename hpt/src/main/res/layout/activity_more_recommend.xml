@@ -8,27 +8,12 @@
     tools:context=".ui.activity.MoreRecommendActivity">
 
     <com.queqianme.hpt.view.TitleBackView
+        android:layout_below="@id/title_line"
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x88"
         hpt:titleText="推荐" />
 
-    <com.ab.view.pullview.AbPullToRefreshView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/mPullRefreshView"
-        android:layout_width="fill_parent"
-        android:layout_below="@id/title"
-        android:layout_height="fill_parent">
-
-        <ListView
-            android:id="@+id/listview"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:divider="#00000000"
-            android:dividerHeight="@dimen/x20"
-            android:listSelector="#00000000" >
-        </ListView>
-    </com.ab.view.pullview.AbPullToRefreshView>
 
 
 </RelativeLayout>

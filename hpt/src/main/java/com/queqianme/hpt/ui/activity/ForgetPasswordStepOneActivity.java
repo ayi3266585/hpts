@@ -4,11 +4,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.ab.util.AbDialogUtil;
 import com.ab.util.AbToastUtil;
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseActivity;
-import com.queqianme.hpt.bean.ValidatorEvent;
+import com.queqianme.hpt.base.BaseActivity;
+import com.queqianme.hpt.base.ValidatorEvent;
 import com.queqianme.hpt.utils.ActivityCollector;
 import com.queqianme.hpt.utils.EmptyValidator;
 import com.queqianme.hpt.utils.HttpURL;
@@ -140,7 +139,6 @@ public class ForgetPasswordStepOneActivity extends BaseActivity {
 
     //验证重置登陆密码验证码
     private void checkResetPasswordCaptcha() {
-        AbDialogUtil.showProgressDialog(this, 0, "验证中...");
         JSONObject object = new JSONObject();
         try {
             object.put("phone", phone.getText().toString().trim());
@@ -152,7 +150,6 @@ public class ForgetPasswordStepOneActivity extends BaseActivity {
         HttpRequest.post(HttpURL.checkResetPasswordCaptcha, params, new BaseHttpRequestCallback<String>() {
             @Override
             protected void onSuccess(String s) {
-                AbDialogUtil.removeDialog(ForgetPasswordStepOneActivity.this);
                 JSONObject object;
                 try {
                     object = new JSONObject(s);
@@ -173,7 +170,6 @@ public class ForgetPasswordStepOneActivity extends BaseActivity {
 
             @Override
             public void onFailure(int errorCode, String msg) {
-                AbDialogUtil.removeDialog(ForgetPasswordStepOneActivity.this);
                 AbToastUtil.showToast(ForgetPasswordStepOneActivity.this, R.string.http_failure);
             }
         });

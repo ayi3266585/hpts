@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hpt="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MyLoanPublishActivity">
+
+    <com.queqianme.hpt.view.TitleBackView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:layout_below="@id/title_line"
+        hpt:titleText="发布中借条" />
+
+
+    <TextView
+        android:id="@+id/my_loan_publish_manage"
+        android:layout_width="@dimen/x88"
+        android:layout_height="@dimen/x88"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/title_line"
+        android:gravity="center"
+        android:text="管理"
+        android:textColor="@color/text_write" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_loan_publish_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:scrollbars="vertical" />
+</RelativeLayout>

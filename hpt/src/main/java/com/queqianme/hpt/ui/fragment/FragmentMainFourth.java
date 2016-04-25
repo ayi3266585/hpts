@@ -11,13 +11,16 @@ import android.widget.TextView;
 import com.ab.util.AbToastUtil;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseFragment;
+import com.queqianme.hpt.base.BaseFragment;
 import com.queqianme.hpt.ui.activity.BankCardActivity;
-import com.queqianme.hpt.ui.activity.BillActivity;
 import com.queqianme.hpt.ui.activity.IdAuthActivity;
 import com.queqianme.hpt.ui.activity.InfomationActivity;
 import com.queqianme.hpt.ui.activity.MessageListActivity;
 import com.queqianme.hpt.ui.activity.MyLoanActivity;
+import com.queqianme.hpt.ui.activity.MyLoanOverActivity;
+import com.queqianme.hpt.ui.activity.MyLoanPublishActivity;
+import com.queqianme.hpt.ui.activity.MyLoanRepayActivity;
+import com.queqianme.hpt.ui.activity.SettingAboutActivity;
 import com.queqianme.hpt.ui.activity.SettingActivity;
 import com.queqianme.hpt.utils.SPUtils;
 import com.queqianme.hpt.utils.Utils;
@@ -44,7 +47,7 @@ public class FragmentMainFourth extends BaseFragment {
     /**
      * 昵称
      */
-    @Bind(R.id.name)
+    @Bind(R.id.fourth_title)
     TextView name;
     /**
      * 请求参数体
@@ -87,8 +90,9 @@ public class FragmentMainFourth extends BaseFragment {
     /**
      * 点击事件
      */
-    @OnClick({R.id.head_setting, R.id.bill, R.id.my_invest, R.id.id_auth, R.id.bank,
-            R.id.loan_data, R.id.message, R.id.setting})
+    @OnClick({R.id.head_setting, R.id.my_invest, R.id.id_auth, R.id.bank,
+            R.id.loan_data, R.id.message, R.id.setting,R.id.about,R.id.my_loan_publish,
+            R.id.my_loan_repay,R.id.my_loan_over})
     public void Click(View view) {
         AbToastUtil.showToast(context, "未登录");
         switch (view.getId()) {
@@ -96,9 +100,17 @@ public class FragmentMainFourth extends BaseFragment {
             case R.id.head_setting:
                 Utils.intnet(getActivity(), InfomationActivity.class);
                 break;
-            //账单
-            case R.id.bill:
-                Utils.intnet(getActivity(), BillActivity.class);
+            //我的借条,发布中
+            case R.id.my_loan_publish:
+                Utils.intnet(getActivity(), MyLoanPublishActivity.class);
+                break;
+            //我的借条,还款中
+            case R.id.my_loan_repay:
+                Utils.intnet(getActivity(), MyLoanRepayActivity.class);
+                break;
+            //我的借条,已完成
+            case R.id.my_loan_over:
+                Utils.intnet(getActivity(), MyLoanOverActivity.class);
                 break;
             //我的投资
             case R.id.my_invest:
@@ -134,6 +146,10 @@ public class FragmentMainFourth extends BaseFragment {
             //设置
             case R.id.setting:
                 Utils.intnet(getActivity(), SettingActivity.class);
+                break;
+            //设置
+            case R.id.about:
+                Utils.intnet(getActivity(), SettingAboutActivity.class);
                 break;
         }
     }

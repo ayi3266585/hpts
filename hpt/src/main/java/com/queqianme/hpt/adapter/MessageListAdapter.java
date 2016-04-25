@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.OnRecyclerItemCLickListener;
+import com.queqianme.hpt.base.OnRecyclerItemCLickListener;
 import com.queqianme.hpt.model.MessageVO;
 
 import java.util.List;

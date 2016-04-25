@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:hpt="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/base_lightgray"
+    android:orientation="vertical"
     tools:context=".ui.activity.PublishPictureActivity">
 
     <com.queqianme.hpt.view.TitleBackView
@@ -13,13 +14,165 @@
         android:layout_height="@dimen/x88"
         hpt:titleText="认证信息" />
 
+    <TextView
+        style="@style/text_999"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x30"
+        android:text="建议wifi环境下上传照片" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/x20"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x88"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x30"
+            android:text="请上传本人身份证正面,反面照片(必填)" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/picture_from"
+                android:layout_width="@dimen/x200"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/head_icon140" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/picture_back"
+                android:layout_width="@dimen/x200"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/head_icon140" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x60">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="@dimen/x200"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="正面照" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="@dimen/x200"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="反面照" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:layout_marginLeft="@dimen/x30"
+            android:background="@color/line_lightgray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x88"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x30"
+            android:text="请上传银行流水/支付宝/微信近期账单(必填)" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/picture_horizontal_recentBills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"/>
+
+            <ImageView
+                android:id="@+id/recentBills_add"
+                android:layout_width="@dimen/x200"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/head_icon140" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginTop="@dimen/x20"
+            android:background="@color/line_lightgray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x88"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x30"
+            android:text="请上传本人近期生活照片(必填)" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/picture_horizontal_recentPersonals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+            <ImageView
+                android:id="@+id/recentPersonals_add"
+                android:layout_width="@dimen/x200"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/head_icon140" />
+        </LinearLayout>
+    </LinearLayout>
+
     <Button
-        android:id="@+id/submit"
+        android:id="@+id/picture_submit"
         style="@style/submit_bg"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x88"
+        android:layout_alignParentBottom="true"
         android:layout_below="@id/linearLayout2"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/x20"
         android:text="完成下一步" />
-</RelativeLayout>
+</LinearLayout>

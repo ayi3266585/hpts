@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hpt="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,15 +8,11 @@
     tools:context="com.queqianme.hpt.ui.activity.CertificationPersionActivity">
 
     <com.queqianme.hpt.view.TitleBackView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/x88" />
-
-    <TextView
         android:id="@+id/title"
-        style="@style/title_text"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/x88"
-        android:text="个人认证" />
+        android:layout_below="@+id/title_line"
+        hpt:titleText="个人认证" />
 
     <LinearLayout
         android:id="@+id/persion_ll1"
@@ -49,11 +46,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:hint="真实姓名" />
+
             <ImageView
                 android:layout_width="@dimen/x44"
-                android:src="@mipmap/delete_icon"
+                android:layout_height="@dimen/x44"
                 android:layout_marginRight="@dimen/x20"
-                android:layout_height="@dimen/x44" />
+                android:src="@mipmap/delete_icon" />
         </LinearLayout>
 
         <View
@@ -80,11 +78,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:hint="18位身份证号" />
+
             <ImageView
                 android:layout_width="@dimen/x44"
-                android:src="@mipmap/delete_icon"
+                android:layout_height="@dimen/x44"
                 android:layout_marginRight="@dimen/x20"
-                android:layout_height="@dimen/x44" />
+                android:src="@mipmap/delete_icon" />
         </LinearLayout>
 
         <View
@@ -111,11 +110,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:hint="联系手机号" />
+
             <ImageView
                 android:layout_width="@dimen/x44"
-                android:src="@mipmap/delete_icon"
+                android:layout_height="@dimen/x44"
                 android:layout_marginRight="@dimen/x20"
-                android:layout_height="@dimen/x44" />
+                android:src="@mipmap/delete_icon" />
         </LinearLayout>
 
         <View

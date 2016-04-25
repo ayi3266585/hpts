@@ -8,6 +8,7 @@
     tools:context="com.queqianme.hpt.ui.activity.InfomationActivity">
 
     <com.queqianme.hpt.view.TitleBackView
+        android:layout_below="@id/title_line"
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x88"
@@ -28,6 +29,8 @@
             android:id="@+id/infomation_head"
             android:layout_width="@dimen/x140"
             android:layout_height="@dimen/x140"
+            hpt:civ_border_color="@color/black"
+            hpt:civ_border_width="1dp"
             android:layout_marginLeft="@dimen/x30"
             android:src="@mipmap/head_icon140" />
 

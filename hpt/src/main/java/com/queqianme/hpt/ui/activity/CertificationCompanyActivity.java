@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseActivity;
+import com.queqianme.hpt.base.BaseActivity;
 import com.queqianme.hpt.utils.ActivityCollector;
 import com.queqianme.hpt.utils.Utils;
 

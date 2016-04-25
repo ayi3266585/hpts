@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y500"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:background="@color/line_lightgray"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pop_whell_cancel"
+            style="@style/text_333"
+            android:layout_width="@dimen/x88"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="取消" />
+
+        <TextView
+            android:id="@+id/pop_whell_title"
+            style="@style/text_333"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="标题" />
+
+        <TextView
+            android:id="@+id/pop_whell_sure"
+            style="@style/text_333"
+            android:layout_width="@dimen/x88"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_height="match_parent"
+            android:textColor="@color/text_blue"
+            android:gravity="center"
+            android:text="确定" />
+    </LinearLayout>
+
+    <com.queqianme.hpt.view.widget.WheelView
+        android:id="@+id/pop_whell_wheelview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -19,7 +19,7 @@
 
 
     <com.queqianme.hpt.view.CircleImageView
-        android:id="@+id/login_head"
+        android:id="@+id/feedback_head"
         android:layout_width="@dimen/x200"
         android:layout_height="@dimen/x200"
         android:layout_marginTop="@dimen/x88"

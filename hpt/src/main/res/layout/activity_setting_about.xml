@@ -8,6 +8,7 @@
     tools:context="com.queqianme.hpt.ui.activity.SettingAboutActivity">
 
     <com.queqianme.hpt.view.TitleBackView
+        android:layout_below="@id/title_line"
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x88"

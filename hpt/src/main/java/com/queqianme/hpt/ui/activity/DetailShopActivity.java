@@ -6,7 +6,7 @@ import android.widget.ScrollView;
 
 import com.queqianme.hpt.R;
 import com.queqianme.hpt.adapter.DatailShopAdapter;
-import com.queqianme.hpt.bean.BaseActivity;
+import com.queqianme.hpt.base.BaseActivity;
 import com.queqianme.hpt.utils.ActivityCollector;
 import com.queqianme.hpt.utils.Utils;
 import com.queqianme.hpt.view.PullToRefreshView;

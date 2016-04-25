@@ -1,19 +1,15 @@
 package com.queqianme.hpt.ui.fragment;
 
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
-import com.ab.view.sliding.AbSlidingPlayView;
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseFragment;
+import com.queqianme.hpt.base.BaseFragment;
 import com.queqianme.hpt.view.PrograssView;
 
 import butterknife.Bind;
@@ -29,11 +25,6 @@ public class FragmentMainFirst extends BaseFragment {
      */
     @Bind(R.id.first_prograssview)
     PrograssView mPrograssview;
-    /**
-     * 广告位
-     */
-    @Bind(R.id.frist_ad)
-    AbSlidingPlayView viewPager;
     /**
      * 圆环最大值
      */
@@ -70,26 +61,26 @@ public class FragmentMainFirst extends BaseFragment {
      * 广告位
      */
     private void startAd() {
-        viewPager.setNavHorizontalGravity(Gravity.CENTER);
-        viewPager.setPageLineImage(BitmapFactory.decodeResource(this.getResources(), R.mipmap.round1)
-                , BitmapFactory.decodeResource(this.getResources(), R.mipmap.round2));
-        final View mPlayView = LayoutInflater.from(getActivity()).inflate(R.layout.item_play_view1, null);
-        ImageView mPlayImage = (ImageView) mPlayView.findViewById(R.id.mPlayImage);
-        mPlayImage.setBackgroundResource(R.mipmap.head_icon100);
-
-        final View mPlayView1 = LayoutInflater.from(getActivity()).inflate(R.layout.item_play_view1, null);
-        ImageView mPlayImage1 = (ImageView) mPlayView1.findViewById(R.id.mPlayImage);
-        mPlayImage1.setBackgroundResource(R.mipmap.head_icon100);
-
-        final View mPlayView2 = LayoutInflater.from(getActivity()).inflate(R.layout.item_play_view1, null);
-        ImageView mPlayImage2 = (ImageView) mPlayView2.findViewById(R.id.mPlayImage);
-        mPlayImage2.setBackgroundResource(R.mipmap.head_icon100);
-
-        viewPager.addView(mPlayView);
-        viewPager.addView(mPlayView1);
-        viewPager.addView(mPlayView2);
-
-        viewPager.startPlay();
+//        viewPager.setNavHorizontalGravity(Gravity.CENTER);
+//        viewPager.setPageLineImage(BitmapFactory.decodeResource(this.getResources(), R.mipmap.round1)
+//                , BitmapFactory.decodeResource(this.getResources(), R.mipmap.round2));
+//        final View mPlayView = LayoutInflater.from(getActivity()).inflate(R.layout.item_play_view1, null);
+//        ImageView mPlayImage = (ImageView) mPlayView.findViewById(R.id.mPlayImage);
+//        mPlayImage.setBackgroundResource(R.mipmap.head_icon100);
+//
+//        final View mPlayView1 = LayoutInflater.from(getActivity()).inflate(R.layout.item_play_view1, null);
+//        ImageView mPlayImage1 = (ImageView) mPlayView1.findViewById(R.id.mPlayImage);
+//        mPlayImage1.setBackgroundResource(R.mipmap.head_icon100);
+//
+//        final View mPlayView2 = LayoutInflater.from(getActivity()).inflate(R.layout.item_play_view1, null);
+//        ImageView mPlayImage2 = (ImageView) mPlayView2.findViewById(R.id.mPlayImage);
+//        mPlayImage2.setBackgroundResource(R.mipmap.head_icon100);
+//
+//        viewPager.addView(mPlayView);
+//        viewPager.addView(mPlayView1);
+//        viewPager.addView(mPlayView2);
+//
+//        viewPager.startPlay();
     }
 
     /**

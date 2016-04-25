@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:hpt="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/base_lightgray"
+    android:orientation="vertical"
     tools:context=".ui.activity.CertificationShopActivity">
 
     <com.queqianme.hpt.view.TitleBackView
@@ -65,10 +66,10 @@
                 android:id="@+id/register_persion_check"
                 android:layout_width="@dimen/x44"
                 android:layout_height="@dimen/x44"
-                android:checked="true"
                 android:layout_marginRight="@dimen/x30"
                 android:background="@drawable/certification_shop_check"
-                android:button="@null" />
+                android:button="@null"
+                android:checked="true" />
 
         </LinearLayout>
 
@@ -143,11 +144,11 @@
         <com.queqianme.hpt.view.CircleImageView
             android:id="@+id/shop_certification_get_head"
             android:layout_width="@dimen/x140"
+            android:layout_height="@dimen/x140"
             android:layout_marginRight="@dimen/x30"
-            hpt:civ_border_width="2dp"
-            hpt:civ_border_color="@color/text_write"
             android:src="@mipmap/head_icon140"
-            android:layout_height="@dimen/x140" />
+            hpt:civ_border_color="@color/text_write"
+            hpt:civ_border_width="2dp" />
 
     </LinearLayout>
 
@@ -194,4 +195,4 @@
         android:layout_marginTop="@dimen/x30"
         android:text="创建店铺" />
 
-</RelativeLayout>
+</LinearLayout>

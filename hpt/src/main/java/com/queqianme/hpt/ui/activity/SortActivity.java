@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.queqianme.hpt.R;
 import com.queqianme.hpt.adapter.ListDropDownAdapter;
-import com.queqianme.hpt.bean.BaseActivity;
+import com.queqianme.hpt.base.BaseActivity;
 import com.queqianme.hpt.utils.ActivityCollector;
 import com.queqianme.hpt.view.DropDownMenu;
 

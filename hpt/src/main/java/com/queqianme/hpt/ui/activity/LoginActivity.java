@@ -6,12 +6,11 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
-import com.ab.util.AbDialogUtil;
 import com.ab.util.AbToastUtil;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseActivity;
-import com.queqianme.hpt.bean.ValidatorEvent;
+import com.queqianme.hpt.base.BaseActivity;
+import com.queqianme.hpt.base.ValidatorEvent;
 import com.queqianme.hpt.utils.ActivityCollector;
 import com.queqianme.hpt.utils.EmptyValidator;
 import com.queqianme.hpt.utils.HttpURL;
@@ -155,7 +154,6 @@ public class LoginActivity extends BaseActivity {
      * 登录请求
      */
     private void login() {
-        AbDialogUtil.showProgressDialog(this, 0, "登录中...");
         JSONObject object = new JSONObject();
         try {
             object.put("phone", phone.getText().toString().trim());
@@ -167,7 +165,6 @@ public class LoginActivity extends BaseActivity {
         HttpRequest.post(HttpURL.login, params, new BaseHttpRequestCallback<String>() {
             @Override
             protected void onSuccess(String s) {
-                AbDialogUtil.removeDialog(LoginActivity.this);
                 try {
                     responseJSON = new JSONObject(s);
                     int status = responseJSON.getInt("status");
@@ -189,7 +186,6 @@ public class LoginActivity extends BaseActivity {
 
             @Override
             public void onFailure(int errorCode, String msg) {
-                AbDialogUtil.removeDialog(LoginActivity.this);
                 AbToastUtil.showToast(LoginActivity.this, R.string.http_failure);
             }
         });
@@ -244,7 +240,6 @@ public class LoginActivity extends BaseActivity {
             @Override
             protected void onSuccess(String s) {
                 LogUtils.i(s);
-                AbDialogUtil.removeDialog(LoginActivity.this);
                 try {
                     responseJSON = new JSONObject(s);
                     int status = responseJSON.getInt("status");
@@ -264,7 +259,6 @@ public class LoginActivity extends BaseActivity {
 
             @Override
             public void onFailure(int errorCode, String msg) {
-                AbDialogUtil.removeDialog(LoginActivity.this);
                 AbToastUtil.showToast(LoginActivity.this, R.string.http_failure);
             }
 

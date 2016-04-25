@@ -102,7 +102,7 @@ public class MessageVO implements Parcelable {
         this.readTime = in.readString();
     }
 
-    public static final Parcelable.Creator<MessageVO> CREATOR = new Parcelable.Creator<MessageVO>() {
+    public static final Creator<MessageVO> CREATOR = new Creator<MessageVO>() {
         public MessageVO createFromParcel(Parcel source) {
             return new MessageVO(source);
         }

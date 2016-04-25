@@ -1,127 +1,235 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hpt="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/base_lightgray">
-
-
-    <TextView
-        android:id="@+id/title"
-        style="@style/title_text"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/x88"
-        android:background="@color/base_somber"
-        android:gravity="center"
-        android:text="我" />
-
-    <TextView
-        android:id="@+id/message"
-        style="@style/title_text"
-        android:layout_width="@dimen/x88"
-        android:layout_alignParentRight="true"
-        android:textSize="14sp"
-        android:layout_height="@dimen/x88"
-        android:gravity="center"
-        android:text="消息" />
-
+    android:background="@color/base_lightgray"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/title">
+        android:scrollbars="none">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <RelativeLayout
-                android:id="@+id/third_rl1"
+            <TextView
+                android:id="@+id/fourth_title"
+                style="@style/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x88"
+                android:background="@color/base_somber"
+                android:gravity="center"
+                android:text="爱菜酱"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/setting"
+                android:layout_width="@dimen/x44"
+                android:layout_height="@dimen/x88"
+                android:layout_marginLeft="@dimen/x30"
+                android:src="@mipmap/setting" />
+
+            <ImageView
+                android:id="@+id/message"
+                android:layout_width="@dimen/x44"
+                android:layout_height="@dimen/x88"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x30"
+                android:gravity="center"
+                android:src="@mipmap/message_bell" />
+
+
+            <View
+                android:id="@+id/fourth_head_bg"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/fourth_title"
+                android:background="@color/base_somber"
+                android:paddingBottom="@dimen/x20"></View>
+
+            <LinearLayout
+                android:id="@+id/foutth_ll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_head"
-                android:paddingBottom="@dimen/x20">
-
-                <RelativeLayout
-                    android:id="@+id/head_setting"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/x20"
-                    android:gravity="center_vertical">
-
-                    <com.queqianme.hpt.view.CircleImageView
-                        android:id="@+id/fragment_fourth_img"
-                        android:layout_width="@dimen/x150"
-                        android:layout_height="@dimen/x150"
-                        android:layout_centerInParent="true"
-                        android:src="@mipmap/head_icon140" />
-
-                </RelativeLayout>
+                android:layout_below="@id/fourth_head_bg"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/name"
+                    style="@style/text_333"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/head_setting"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="@dimen/x20"
-                    android:text="点击登录"
-                    android:textColor="@color/text_write"
-                    android:textSize="@dimen/font_14" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/third_rl3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/third_rl1"
-                android:layout_marginTop="@dimen/x20"
-                android:background="@color/white">
+                    android:layout_marginTop="@dimen/x50"
+                    android:text="可用额度"
+                    android:textSize="@dimen/x30" />
 
                 <TextView
-                    android:id="@+id/third_tv1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/x30"
-                    android:text="我的订单" />
+                    android:layout_marginTop="@dimen/x20"
+                    android:text="1000"
+                    android:textColor="@color/base_somber"
+                    android:textSize="@dimen/x60" />
+
+                <TextView
+                    style="@style/text_333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x20"
+                    android:text="我的借条"
+                    android:textSize="@dimen/x30" />
 
                 <LinearLayout
-                    android:id="@+id/bill"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/third_tv1"
                     android:layout_marginTop="@dimen/x20"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <View
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:drawableTop="@mipmap/ic_launcher"
-                        android:gravity="center"
-                        android:text="申请中" />
+                        android:layout_weight="1" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:drawableTop="@mipmap/ic_launcher"
-                        android:gravity="center"
-                        android:text="还款中" />
+                    <RelativeLayout
+                        android:id="@+id/my_loan_publish"
+                        android:layout_width="@dimen/x115"
+                        android:layout_height="@dimen/x115"
+                        android:paddingBottom="@dimen/x5">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                        <ImageView
+                            android:id="@+id/fourth_img1"
+                            android:layout_width="@dimen/x100"
+                            android:layout_height="@dimen/x100"
+                            android:layout_alignParentBottom="true"
+                            android:src="@mipmap/fourth_publish" />
+
+                        <TextView
+                            android:layout_width="@dimen/x30"
+                            android:layout_height="@dimen/x30"
+                            android:layout_alignParentRight="true"
+                            android:background="@mipmap/dot"
+                            android:gravity="center"
+                            android:text="12"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:drawableTop="@mipmap/ic_launcher"
-                        android:gravity="center"
-                        android:text="放款单" />
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/my_loan_repay"
+                        android:layout_width="@dimen/x100"
+                        android:layout_height="@dimen/x100"
+                        android:src="@mipmap/fourth_repay" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/my_loan_over"
+                        android:layout_width="@dimen/x100"
+                        android:layout_height="@dimen/x100"
+                        android:src="@mipmap/fourth_over" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/x20"
+                    android:layout_marginTop="@dimen/x20"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        style="@style/text_333"
+                        android:layout_width="@dimen/x115"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/x15"
+                        android:gravity="center"
+                        android:src="@mipmap/fourth_publish"
+                        android:text="发布中"
+                        android:textSize="@dimen/x24" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        style="@style/text_333"
+                        android:layout_width="@dimen/x100"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@mipmap/fourth_publish"
+                        android:text="还款中"
+                        android:textSize="@dimen/x24" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        style="@style/text_333"
+                        android:layout_width="@dimen/x100"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@mipmap/fourth_publish"
+                        android:text="已完成"
+                        android:textSize="@dimen/x24" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/head_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/message"
+                android:layout_marginTop="@dimen/x20"
+                android:gravity="center_vertical">
+
+                <com.queqianme.hpt.view.CircleImageView
+                    android:id="@+id/fragment_fourth_img"
+                    android:layout_width="@dimen/x140"
+                    android:layout_height="@dimen/x140"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/x10"
+                    android:src="@mipmap/head_icon140"
+                    hpt:civ_border_color="@color/black"
+                    hpt:civ_border_width="1dp" />
+
             </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/third_rl3"
+                android:layout_below="@id/foutth_ll"
                 android:layout_marginTop="@dimen/x20"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
@@ -137,7 +245,7 @@
                         android:layout_width="@dimen/x44"
                         android:layout_height="@dimen/x44"
                         android:layout_marginLeft="@dimen/x30"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@mipmap/fourth_my_loan" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -171,7 +279,7 @@
                         android:layout_width="@dimen/x44"
                         android:layout_height="@dimen/x44"
                         android:layout_marginLeft="@dimen/x30"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@mipmap/fourth_id" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -185,6 +293,7 @@
                         android:layout_weight="1"></LinearLayout>
 
                     <TextView
+                        style="@style/text_999"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="未认证" />
@@ -200,7 +309,7 @@
                     android:id="@+id/bank"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/x88"
-                    android:layout_marginTop="@dimen/x5"
+                    android:layout_marginTop="@dimen/x1"
                     android:background="@color/white"
                     android:gravity="center_vertical">
 
@@ -208,7 +317,7 @@
                         android:layout_width="@dimen/x44"
                         android:layout_height="@dimen/x44"
                         android:layout_marginLeft="@dimen/x30"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@mipmap/fourth_bankcard" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -243,13 +352,13 @@
                         android:layout_width="@dimen/x44"
                         android:layout_height="@dimen/x44"
                         android:layout_marginLeft="@dimen/x30"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@mipmap/fourth_loan_data" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/x30"
-                        android:text="资料认证" />
+                        android:text="借款资料" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -264,7 +373,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/setting"
+                    android:id="@+id/about"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/x88"
                     android:layout_marginTop="@dimen/x20"
@@ -275,7 +384,7 @@
                         android:layout_width="@dimen/x44"
                         android:layout_height="@dimen/x44"
                         android:layout_marginLeft="@dimen/x30"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@mipmap/fourth_about" />
 
                     <TextView
                         android:layout_width="wrap_content"

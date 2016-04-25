@@ -306,9 +306,9 @@ public class APPUtils {
             @Override
             public void onClick(View v) {
                 //相册
-                Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
-                intent.setData(android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                intent.setData(MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 ((Activity) context).startActivityForResult(intent, Config.PHOTO_REQUEST_GALLERY);
             }
         });

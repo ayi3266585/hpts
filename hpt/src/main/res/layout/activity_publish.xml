@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:hpt="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/base_lightgray"
+    android:orientation="vertical"
     tools:context=".ui.activity.PublishActivity">
+
 
     <com.queqianme.hpt.view.TitleBackView
         android:id="@+id/title"
@@ -13,58 +15,144 @@
         android:layout_height="@dimen/x88"
         hpt:titleText="发布借条" />
 
-
-    <LinearLayout
-        android:id="@+id/linearLayout1"
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/title">
+        android:src="@mipmap/all_shop" />
 
-        <Button
-            android:id="@+id/btn1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="借款信息(必填)" />
+    <TextView
+        style="@style/text_333"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x30"
+        android:text="为保证是您本人操作,请完成以下信息" />
 
-        <Button
-            android:id="@+id/btn2"
-            android:layout_width="0dp"
+    <LinearLayout
+        android:id="@+id/publish_picture"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:layout_marginTop="@dimen/x20"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/x44"
+            android:layout_height="@dimen/x44"
+            android:layout_marginLeft="@dimen/x30"
+            android:src="@mipmap/fourth_id" />
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="认证信息(必填) " />
+            android:layout_marginLeft="@dimen/x30"
+            android:text="认证资料(必填)" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></LinearLayout>
+
+        <TextView
+            style="@style/text_999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未填写"
+            android:textColor="@color/text_red" />
+
+        <ImageView
+            android:layout_width="@dimen/x44"
+            android:layout_height="@dimen/x44"
+            android:layout_marginRight="@dimen/x30"
+            android:src="@mipmap/arrow_right" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/publish_person"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout1">
+        android:layout_height="@dimen/x88"
+        android:layout_marginTop="@dimen/x2"
+        android:background="@color/white"
+        android:gravity="center_vertical">
 
-        <Button
-            android:id="@+id/btn3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="个人信息" />
+        <ImageView
+            android:layout_width="@dimen/x44"
+            android:layout_height="@dimen/x44"
+            android:layout_marginLeft="@dimen/x30"
+            android:src="@mipmap/fourth_id" />
 
-        <Button
-            android:id="@+id/btn4"
-            android:layout_width="0dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="学校/公司" />
+            android:layout_marginLeft="@dimen/x30"
+            android:text="个人信息)" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></LinearLayout>
+
+        <TextView
+            style="@style/text_999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未填写"
+            android:textColor="@color/text_red" />
+
+        <ImageView
+            android:layout_width="@dimen/x44"
+            android:layout_height="@dimen/x44"
+            android:layout_marginRight="@dimen/x30"
+            android:src="@mipmap/arrow_right" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/publish_school_company"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:layout_marginTop="@dimen/x2"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/x44"
+            android:layout_height="@dimen/x44"
+            android:layout_marginLeft="@dimen/x30"
+            android:src="@mipmap/fourth_id" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x30"
+            android:text="学校公司" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></LinearLayout>
+
+        <TextView
+            style="@style/text_999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未填写"
+            android:textColor="@color/text_red" />
+
+        <ImageView
+            android:layout_width="@dimen/x44"
+            android:layout_height="@dimen/x44"
+            android:layout_marginRight="@dimen/x30"
+            android:src="@mipmap/arrow_right" />
+    </LinearLayout>
 
     <Button
-        android:id="@+id/submit"
+        android:id="@+id/publish_submit"
         style="@style/submit_bg"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x88"
-        android:layout_below="@id/linearLayout2"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/x88"
-        android:text="发布" />
+        android:text="下一步" />
 
-</RelativeLayout>
+</LinearLayout>

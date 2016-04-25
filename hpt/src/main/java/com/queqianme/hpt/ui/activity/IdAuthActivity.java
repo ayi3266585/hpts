@@ -4,11 +4,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.ab.util.AbDialogUtil;
 import com.ab.util.AbToastUtil;
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseActivity;
-import com.queqianme.hpt.bean.ValidatorEvent;
+import com.queqianme.hpt.base.BaseActivity;
+import com.queqianme.hpt.base.ValidatorEvent;
 import com.queqianme.hpt.utils.ActivityCollector;
 import com.queqianme.hpt.utils.EmptyValidator;
 import com.queqianme.hpt.utils.HttpURL;
@@ -108,7 +107,6 @@ public class IdAuthActivity extends BaseActivity {
      * 实名认证请求
      */
     private void submit() {
-        AbDialogUtil.showProgressDialog(this, 0, "认证中...");
         JSONObject object = new JSONObject();
         try {
             object.put("userId", SPUtils.get(this, "userId", 0L));
@@ -122,7 +120,6 @@ public class IdAuthActivity extends BaseActivity {
         HttpRequest.post(HttpURL.authIdentityInfo, params, new BaseHttpRequestCallback<String>() {
             @Override
             protected void onSuccess(String s) {
-                AbDialogUtil.removeDialog(IdAuthActivity.this);
                 try {
                     responseJSON = new JSONObject(s);
                     int status = responseJSON.getInt("status");
@@ -140,7 +137,6 @@ public class IdAuthActivity extends BaseActivity {
 
             @Override
             public void onFailure(int errorCode, String msg) {
-                AbDialogUtil.removeDialog(IdAuthActivity.this);
                 AbToastUtil.showToast(IdAuthActivity.this, R.string.http_failure);
             }
         });

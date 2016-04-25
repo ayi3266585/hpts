@@ -8,10 +8,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.OnRecyclerItemCLickListener;
+import com.queqianme.hpt.base.OnRecyclerItemCLickListener;
 import com.queqianme.hpt.model.InvestVO;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * 首页RecyclerView适配器
@@ -24,10 +26,22 @@ public class LoanListAdapter extends RecyclerView.Adapter<LoanListAdapter.ViewHo
     public static int VIEW_CLICK = 2;
     /*数据列表*/
     private List<InvestVO> list;
+    private int[] heads = new int[]{R.mipmap.apply_bg1,R.mipmap.apply_bg2,R.mipmap.apply_bg3};
 
     /*构造函数*/
     public LoanListAdapter(List<InvestVO> list) {
-        this.list = list;
+//        this.list = list;
+        this.list = new ArrayList<>();
+        for (int i = 0;i<7;i++) {
+            InvestVO investVO = new InvestVO();
+            this.list.add(investVO);
+        }
+        this.list.get(0).setReason("爽肤水的粉丝的粉色发是粉色发斯蒂芬爽肤水的范德萨水电费爽肤水");
+        this.list.get(1).setReason("爽肤水的粉丝的粉色发是粉色发斯蒂芬爽肤21312水的范德萨水电费爽肤水");
+        this.list.get(2).setReason("爽肤水的粉丝的粉色发是粉色发斯蒂芬爽肤水的范德萨水电费爽肤水");
+        this.list.get(3).setReason("爽肤色发斯蒂芬爽肤水的范德萨水电费爽肤水");
+        this.list.get(4).setReason("爽肤水的粉丝的粉色发是粉色发斯蒂芬爽肤水的范德萨水电费爽肤水");
+        this.list.get(6).setReason("爽肤的粉色发是粉色发斯蒂芬爽水");
     }
 
     /*点击事件接口*/
@@ -46,6 +60,9 @@ public class LoanListAdapter extends RecyclerView.Adapter<LoanListAdapter.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.tv.setText(list.get(position).getReason());
+
+//        holder.tv.setText(new Random().nextInt(999999999)+"RecyclerViewRecyclerView钱吃饭了");
+        holder.head_bg.setImageResource(heads[new Random().nextInt(3)]);
     }
 
     /*获取数据数量*/
@@ -69,6 +86,7 @@ public class LoanListAdapter extends RecyclerView.Adapter<LoanListAdapter.ViewHo
 
     /*ViewHolder初始化控件,持有每个Item的所有界面元素*/
     public static class ViewHolder extends RecyclerView.ViewHolder {
+        ImageView head_bg;
         ImageView head;
         TextView tv;
 
@@ -76,6 +94,7 @@ public class LoanListAdapter extends RecyclerView.Adapter<LoanListAdapter.ViewHo
             super(itemView);
             tv = (TextView) itemView.findViewById(R.id.loan_list_tv);
             head = (ImageView) itemView.findViewById(R.id.loan_list_head);
+            head_bg = (ImageView) itemView.findViewById(R.id.loan_list_head_bg);
             //控件点击事件
             head.setOnClickListener(new View.OnClickListener() {
                 @Override

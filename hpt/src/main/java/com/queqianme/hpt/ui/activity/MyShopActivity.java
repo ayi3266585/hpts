@@ -1,10 +1,7 @@
 package com.queqianme.hpt.ui.activity;
 
 import android.content.Context;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -12,9 +9,8 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ab.view.sliding.AbSlidingPlayView;
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseActivity;
+import com.queqianme.hpt.base.BaseActivity;
 import com.queqianme.hpt.utils.ActivityCollector;
 
 import butterknife.Bind;
@@ -29,11 +25,6 @@ public class MyShopActivity extends BaseActivity {
      */
     @Bind(R.id.my_shop_gridview)
     GridView gridView;
-    /**
-     * 广告
-     */
-    @Bind(R.id.my_shop_ad)
-    AbSlidingPlayView viewPager;
     /**
      * gridview图标
      */
@@ -71,26 +62,26 @@ public class MyShopActivity extends BaseActivity {
      * 广告位
      */
     private void startAd() {
-        viewPager.setNavHorizontalGravity(Gravity.CENTER);
-        viewPager.setPageLineImage(BitmapFactory.decodeResource(this.getResources(), R.mipmap.round1)
-                , BitmapFactory.decodeResource(this.getResources(), R.mipmap.round2));
-        final View mPlayView = LayoutInflater.from(this).inflate(R.layout.item_play_view1, null);
-        ImageView mPlayImage = (ImageView) mPlayView.findViewById(R.id.mPlayImage);
-        mPlayImage.setBackgroundResource(R.mipmap.head_icon100);
-
-        final View mPlayView1 = LayoutInflater.from(this).inflate(R.layout.item_play_view1, null);
-        ImageView mPlayImage1 = (ImageView) mPlayView1.findViewById(R.id.mPlayImage);
-        mPlayImage1.setBackgroundResource(R.mipmap.head_icon100);
-
-        final View mPlayView2 = LayoutInflater.from(this).inflate(R.layout.item_play_view1, null);
-        ImageView mPlayImage2 = (ImageView) mPlayView2.findViewById(R.id.mPlayImage);
-        mPlayImage2.setBackgroundResource(R.mipmap.head_icon100);
-
-        viewPager.addView(mPlayView);
-        viewPager.addView(mPlayView1);
-        viewPager.addView(mPlayView2);
-
-        viewPager.startPlay();
+//        viewPager.setNavHorizontalGravity(Gravity.CENTER);
+//        viewPager.setPageLineImage(BitmapFactory.decodeResource(this.getResources(), R.mipmap.round1)
+//                , BitmapFactory.decodeResource(this.getResources(), R.mipmap.round2));
+//        final View mPlayView = LayoutInflater.from(this).inflate(R.layout.item_play_view1, null);
+//        ImageView mPlayImage = (ImageView) mPlayView.findViewById(R.id.mPlayImage);
+//        mPlayImage.setBackgroundResource(R.mipmap.head_icon100);
+//
+//        final View mPlayView1 = LayoutInflater.from(this).inflate(R.layout.item_play_view1, null);
+//        ImageView mPlayImage1 = (ImageView) mPlayView1.findViewById(R.id.mPlayImage);
+//        mPlayImage1.setBackgroundResource(R.mipmap.head_icon100);
+//
+//        final View mPlayView2 = LayoutInflater.from(this).inflate(R.layout.item_play_view1, null);
+//        ImageView mPlayImage2 = (ImageView) mPlayView2.findViewById(R.id.mPlayImage);
+//        mPlayImage2.setBackgroundResource(R.mipmap.head_icon100);
+//
+//        viewPager.addView(mPlayView);
+//        viewPager.addView(mPlayView1);
+//        viewPager.addView(mPlayView2);
+//
+//        viewPager.startPlay();
     }
 
     class MyGridView extends BaseAdapter {

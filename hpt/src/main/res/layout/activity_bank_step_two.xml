@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:hpt="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/base_lightgray"
+    android:orientation="vertical"
     tools:context="com.queqianme.hpt.ui.activity.BankStepTwoActivity">
 
     <com.queqianme.hpt.view.TitleBackView
@@ -39,10 +40,10 @@
                 android:id="@+id/cardName"
                 style="@style/text_333"
                 android:layout_width="0dp"
-                android:gravity="center_vertical"
                 android:layout_height="wrap_content"
                 android:layout_weight="4.5"
                 android:drawableLeft="@mipmap/certification_none"
+                android:gravity="center_vertical"
                 android:text="交通银行" />
 
         </LinearLayout>
@@ -88,4 +89,4 @@
         android:layout_centerVertical="true"
         android:layout_marginTop="@dimen/x58"
         android:text="下一步" />
-</RelativeLayout>
+</LinearLayout>

@@ -8,20 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ab.util.AbDialogUtil;
 import com.ab.util.AbToastUtil;
 import com.queqianme.hpt.R;
 import com.queqianme.hpt.adapter.LoanListAdapter;
-import com.queqianme.hpt.bean.BaseFragment;
-import com.queqianme.hpt.bean.OnRecyclerItemCLickListener;
-import com.queqianme.hpt.bean.SpacesItemDecoration;
+import com.queqianme.hpt.base.BaseFragment;
+import com.queqianme.hpt.base.OnRecyclerItemCLickListener;
 import com.queqianme.hpt.model.InvestVO;
 import com.queqianme.hpt.ui.activity.LoanUserInfoActivity;
 import com.queqianme.hpt.ui.activity.LoaningActivity;
-import com.queqianme.hpt.ui.activity.PublishActivity;
+import com.queqianme.hpt.ui.activity.PublishIOUActivity;
 import com.queqianme.hpt.utils.HttpURL;
 import com.queqianme.hpt.utils.LogUtils;
 import com.queqianme.hpt.utils.Utils;
+import com.queqianme.hpt.view.widget.ProgressDialog;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -61,6 +60,7 @@ public class FragmentMainSecond extends BaseFragment {
      * 借款列表
      */
     private ArrayList<InvestVO> list;
+    private ProgressDialog dialog;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -76,7 +76,9 @@ public class FragmentMainSecond extends BaseFragment {
      */
     private void init() {
         context = getActivity();
-        AbDialogUtil.showProgressDialog(context, 0, "加载中");
+        dialog = new ProgressDialog(context, "努力中...");
+        dialog.builder();
+        dialog.showDialog();
         params = new RequestParams(this);
         list = new ArrayList<>();
         /*获取投资列表*/
@@ -88,8 +90,8 @@ public class FragmentMainSecond extends BaseFragment {
         adapter = new LoanListAdapter(list);
         secondRecycler.setAdapter(adapter);
         //设置item之间的间隔
-        SpacesItemDecoration decoration=new SpacesItemDecoration((int) getResources().getDimension(R.dimen.x10));
-        secondRecycler.addItemDecoration(decoration);
+//        SpacesItemDecoration decoration=new SpacesItemDecoration((int) getResources().getDimension(R.dimen.x10));
+//        secondRecycler.addItemDecoration(decoration);
         adapter.setOnItemClickListener(new OnRecyclerItemCLickListener() {
             @Override
             public void onItemClick(View view, int flag) {
@@ -122,8 +124,8 @@ public class FragmentMainSecond extends BaseFragment {
         HttpRequest.post(HttpURL.investList, params, new BaseHttpRequestCallback<String>() {
             @Override
             protected void onSuccess(String s) {
+                dialog.dismiss();
                 LogUtils.i(s);
-                AbDialogUtil.removeDialog(context);
                 try {
                     responseJSON = new JSONObject(s);
                     int status = responseJSON.getInt("status");
@@ -154,7 +156,7 @@ public class FragmentMainSecond extends BaseFragment {
 
             @Override
             public void onFailure(int errorCode, String msg) {
-                AbDialogUtil.removeDialog(context);
+                dialog.dismiss();
                 AbToastUtil.showToast(context, R.string.http_failure);
             }
 
@@ -169,7 +171,7 @@ public class FragmentMainSecond extends BaseFragment {
         switch (view.getId()) {
             //发布
             case R.id.publish:
-                Utils.intnet(context, PublishActivity.class);
+                Utils.intnet(context, PublishIOUActivity.class);
                 break;
         }
     }

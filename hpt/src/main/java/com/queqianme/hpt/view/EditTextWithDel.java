@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.ValidatorEvent;
+import com.queqianme.hpt.base.ValidatorEvent;
 
 import de.greenrobot.event.EventBus;
 

@@ -4,17 +4,15 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.widget.RadioGroup;
 
 import com.ab.util.AbToastUtil;
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseActivity;
+import com.queqianme.hpt.base.BaseActivity;
 import com.queqianme.hpt.ui.fragment.FragmentMainFourth;
 import com.queqianme.hpt.ui.fragment.FragmentMainSecond;
 import com.queqianme.hpt.ui.fragment.FragmentMainThird;
 import com.queqianme.hpt.utils.ActivityCollector;
-import com.queqianme.hpt.utils.HttpURL;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -37,6 +35,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ButterKnife.bind(this);
         ActivityCollector.addActivity(this);
         setSelect(R.id.main_second);
@@ -48,7 +47,6 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        Log.i("ip", "ip="+HttpURL.IP);
     }
 
     /**

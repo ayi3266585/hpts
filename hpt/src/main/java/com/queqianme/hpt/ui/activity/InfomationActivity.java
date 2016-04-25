@@ -13,7 +13,7 @@ import com.ab.util.AbStrUtil;
 import com.ab.util.AbToastUtil;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseActivity;
+import com.queqianme.hpt.base.BaseActivity;
 import com.queqianme.hpt.utils.APPUtils;
 import com.queqianme.hpt.utils.ActivityCollector;
 import com.queqianme.hpt.utils.Config;

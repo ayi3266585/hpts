@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseFragment;
+import com.queqianme.hpt.base.BaseFragment;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;

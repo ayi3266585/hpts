@@ -20,8 +20,35 @@
         <attr name="ddmenuSelectedIcon" format="reference" />
         <attr name="ddmenuUnselectedIcon" format="reference" />
     </declare-styleable>
-
+    <!-- 自定义标题返回 -->
     <declare-styleable name="TitleBackView">
         <attr name="titleText" format="string" />
     </declare-styleable>
+
+    <!-- 自定义相机 -->
+    <declare-styleable name="PreviewBorderView">
+        <attr name="tipText" format="string" />
+        <attr name="tipTextColor" format="color|reference" />
+        <attr name="tipTextSize" format="dimension" />
+    </declare-styleable>
+
+    <!-- 自定义加载 -->
+    <declare-styleable name="whorlview_style">
+        <!--<attr name="WhorlView_SmallWhorlColor" format="color" />
+        <attr name="WhorlView_MiddleWhorlColor" format="color" />
+        <attr name="WhorlView_BigWhorlColor" format="color" />-->
+
+        <attr name="whorlview_circle_colors" format="string" />
+
+        <attr name="whorlview_circle_speed" format="integer" />
+        <attr name="whorlview_parallax">
+            <enum name="fast" value="1" />
+            <enum name="medium" value="0" />
+            <enum name="slow" value="2" />
+        </attr>
+        <attr name="whorlview_sweepAngle" format="float" />
+        <attr name="whorlview_strokeWidth" format="float" />
+    </declare-styleable>
+
+
 </resources>

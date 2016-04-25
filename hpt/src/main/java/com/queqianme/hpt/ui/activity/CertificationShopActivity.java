@@ -2,18 +2,15 @@ package com.queqianme.hpt.ui.activity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 
-import com.ab.util.AbDialogUtil;
-import com.ab.util.AbStrUtil;
 import com.ab.util.AbToastUtil;
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseActivity;
+import com.queqianme.hpt.base.BaseActivity;
 import com.queqianme.hpt.utils.APPUtils;
 import com.queqianme.hpt.utils.ActivityCollector;
 import com.queqianme.hpt.utils.Config;
@@ -126,31 +123,31 @@ public class CertificationShopActivity extends BaseActivity {
                 intent2.putExtra("PATH", currentFilePath);
                 startActivityForResult(intent2, Config.PHOTO_REQUEST_CUT);
                 break;
-
-            case Config.PHOTO_REQUEST_GALLERY:// 当选择从本地获取图片时
-                // 做非空判断，当我们觉得不满意想重新剪裁的时候便不会报异常
-                if (data.getData() == null) {
-                    break;
-                }
-                Uri uri = data.getData();
-                currentFilePath = APPUtils.getPath(uri, this);
-                if (!AbStrUtil.isEmpty(currentFilePath)) {
-                    Intent intent1 = new Intent(this, CropImageActivity.class);
-                    intent1.putExtra("PATH", currentFilePath);
-                    startActivityForResult(intent1, Config.PHOTO_REQUEST_CUT);
-                } else {
-                    AbToastUtil.showToast(CertificationShopActivity.this, "未在存储卡中找到这个文件");
-                }
-                break;
-            case Config.PHOTO_REQUEST_CUT:// 返回的结果
-                if (APPUtils.chooseView != null) {
-                    AbDialogUtil.removeDialog(APPUtils.chooseView);
-                }
-                if (data != null) {
-                    Bitmap bitmap = data.getParcelableExtra("data");
-                    head.setImageBitmap(bitmap);
-                }
-                break;
+//
+//            case Config.PHOTO_REQUEST_GALLERY:// 当选择从本地获取图片时
+//                // 做非空判断，当我们觉得不满意想重新剪裁的时候便不会报异常
+//                if (data.getData() == null) {
+//                    break;
+//                }
+//                Uri uri = data.getData();
+//                currentFilePath = APPUtils.getPath(uri, this);
+//                if (!AbStrUtil.isEmpty(currentFilePath)) {
+//                    Intent intent1 = new Intent(this, CropImageActivity.class);
+//                    intent1.putExtra("PATH", currentFilePath);
+//                    startActivityForResult(intent1, Config.PHOTO_REQUEST_CUT);
+//                } else {
+//                    AbToastUtil.showToast(CertificationShopActivity.this, "未在存储卡中找到这个文件");
+//                }
+//                break;
+//            case Config.PHOTO_REQUEST_CUT:// 返回的结果
+//                if (APPUtils.chooseView != null) {
+//                    AbDialogUtil.removeDialog(APPUtils.chooseView);
+//                }
+//                if (data != null) {
+//                    Bitmap bitmap = data.getParcelableExtra("data");
+//                    head.setImageBitmap(bitmap);
+//                }
+//                break;
         }
     }
 

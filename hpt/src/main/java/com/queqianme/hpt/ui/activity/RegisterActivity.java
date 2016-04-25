@@ -7,11 +7,10 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
-import com.ab.util.AbDialogUtil;
 import com.ab.util.AbToastUtil;
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseActivity;
-import com.queqianme.hpt.bean.ValidatorEvent;
+import com.queqianme.hpt.base.BaseActivity;
+import com.queqianme.hpt.base.ValidatorEvent;
 import com.queqianme.hpt.utils.ActivityCollector;
 import com.queqianme.hpt.utils.EmptyValidator;
 import com.queqianme.hpt.utils.HttpURL;
@@ -176,7 +175,6 @@ public class RegisterActivity extends BaseActivity {
 
     //提交注册
     private void register() {
-        AbDialogUtil.showProgressDialog(this, 0, "提交中...");
         JSONObject object = new JSONObject();
         try {
             object.put("phone", phone.getText().toString().trim());
@@ -189,7 +187,6 @@ public class RegisterActivity extends BaseActivity {
         HttpRequest.post(HttpURL.register, params, new BaseHttpRequestCallback<String>() {
             @Override
             protected void onSuccess(String s) {
-                AbDialogUtil.removeDialog(RegisterActivity.this);
                 JSONObject object;
                 try {
                     object = new JSONObject(s);
@@ -211,7 +208,6 @@ public class RegisterActivity extends BaseActivity {
 
             @Override
             public void onFailure(int errorCode, String msg) {
-                AbDialogUtil.removeDialog(RegisterActivity.this);
                 AbToastUtil.showToast(RegisterActivity.this, R.string.http_failure);
             }
         });

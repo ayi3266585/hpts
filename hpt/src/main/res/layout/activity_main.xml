@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/base_lightgray"
     android:orientation="vertical"
     tools:context=".ui.activity.MainActivity">
 
@@ -11,9 +10,7 @@
         android:id="@+id/main_fl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
-
-    </FrameLayout>
+        android:layout_weight="1"></FrameLayout>
 
     <View
         android:layout_width="match_parent"
@@ -24,19 +21,19 @@
     <RadioGroup
         android:id="@+id/main_ll"
         android:layout_width="match_parent"
-        android:paddingTop="@dimen/x10"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/x10">
 
         <RadioButton
             android:id="@+id/main_second"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:checked="true"
             android:button="@null"
-            android:drawableTop="@drawable/main_navigation_second_btn"
+            android:checked="true"
+            android:drawableTop="@drawable/main_navigation_first_btn"
             android:gravity="center"
             android:text="投资"
             android:textColor="@drawable/main_navigation_btn_text_color"
@@ -48,11 +45,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/main_navigation_third_btn"
+            android:drawableTop="@drawable/main_navigation_second_btn"
             android:gravity="center"
             android:text="聊天"
             android:textColor="@drawable/main_navigation_btn_text_color"
             android:textSize="@dimen/font_12" />
+
         <RadioButton
             android:id="@+id/main_fourth"
             android:layout_width="wrap_content"

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:hpt="http://schemas.android.com/apk/res-auto"
+    tools:context="com.queqianme.hpt.ui.activity.MyLoanRepayActivity">
+
+
+
+    <com.queqianme.hpt.view.TitleBackView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:layout_below="@id/title_line"
+        hpt:titleText="还款中借条" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_loan_publish_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>

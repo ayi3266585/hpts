@@ -9,9 +9,9 @@ import android.view.View;
 import com.ab.util.AbToastUtil;
 import com.queqianme.hpt.R;
 import com.queqianme.hpt.adapter.MessageListAdapter;
-import com.queqianme.hpt.bean.BaseActivity;
-import com.queqianme.hpt.bean.OnRecyclerItemCLickListener;
-import com.queqianme.hpt.bean.RecycleViewDivider;
+import com.queqianme.hpt.base.BaseActivity;
+import com.queqianme.hpt.base.OnRecyclerItemCLickListener;
+import com.queqianme.hpt.controller.RecycleViewDivider;
 import com.queqianme.hpt.model.MessageVO;
 import com.queqianme.hpt.utils.ActivityCollector;
 

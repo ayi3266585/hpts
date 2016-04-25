@@ -1,98 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hpt="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white"
-    android:orientation="vertical">
+    android:layout_gravity="center"
+    android:foreground="?android:attr/selectableItemBackground"
+    hpt:cardBackgroundColor="@android:color/white"
+    hpt:cardCornerRadius="8dp"
+    android:layout_margin="5dp"
+    hpt:cardElevation="4dp">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/loan_list_head"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/head_icon100" />
+                android:id="@+id/loan_list_head_bg"
+                android:layout_width="@dimen/x98"
+                android:layout_height="@dimen/x180"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/apply_bg1" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/head_icon100" />
-        </LinearLayout>
+            <com.queqianme.hpt.view.CircleImageView
+                android:id="@+id/loan_list_head"
+                android:layout_width="@dimen/x100"
+                android:layout_height="@dimen/x100"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/head_icon140"
+                hpt:civ_border_color="@color/black"
+                hpt:civ_border_width="1dp" />
+        </RelativeLayout>
 
         <LinearLayout
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:orientation="vertical">
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical">
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x180"
+                android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    style="@style/text_999"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:gravity="center_vertical"
                     android:text="我要借" />
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="center_vertical"
-                    android:text="3000¥" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    style="@style/text_999"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:gravity="center_vertical"
                     android:text="借多久" />
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    style="@style/text_999"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="3个月" />
+                    android:text="日利息" />
+
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical">
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x180"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="你可赚" />
+                    android:gravity="center_vertical"
+                    android:text="3000元"
+                    android:textColor="@color/text_orange" />
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="12¥/月" />
+                    android:text="3个月"
+                    android:textColor="@color/text_orange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="1.22元"
+                    android:textColor="@color/text_orange" />
             </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 
@@ -100,11 +120,16 @@
     <TextView
         android:id="@+id/loan_list_tv"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
         android:ellipsize="end"
         android:maxLines="3"
-        android:text="我需要一笔钱来给流浪动物治病,学生狗求助" />
+        android:text="我需要一笔钱来给流浪动物治病,学生狗求助"
+        android:textColor="@color/text_somber"
+        android:textSize="@dimen/x30" />
+
 </LinearLayout>
+</android.support.v7.widget.CardView>

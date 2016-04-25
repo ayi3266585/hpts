@@ -1,0 +1,78 @@
+//声明插件，这是一个android程序，如果是android库，应该是com.android.library
+apply plugin: 'com.android.application'
+//应用插件
+apply plugin: 'com.bugtags.library.plugin'
+
+android {
+    compileSdkVersion 23    //sdk版本
+    buildToolsVersion '23.0.2'  //buildTools版本
+
+    //默认配置，会同时应用到debug和release版本上
+    defaultConfig {
+        applicationId "com.queqianme.hpt"   //包名
+        minSdkVersion 17  //最低sdk版本
+        targetSdkVersion 23//最高sdk版本
+        versionCode 1    //版本号
+        versionName "1.0"   //版本名
+
+        // dex突破65535的限制
+        multiDexEnabled true
+    }
+    //这里面可以配置debug和release版本的一些参数，比如混淆、签名配置等
+    buildTypes {
+        release {
+            // 移除无用的resource文件
+            shrinkResources true
+            buildConfigField "String", "BUILD_VERSION", "\"release\""
+            minifyEnabled true //混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //混淆路径
+        }
+
+        debug{
+
+            buildConfigField "String", "BUILD_VERSION", "\"debug\""
+            minifyEnabled true //混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //混淆路径
+
+        }
+
+    }
+}
+
+//自动上传插件
+bugtags {
+    appKey "273129c39f430e9919f4a22767f1cadc"  //这里是你的 appKey
+    appSecret "8f65189f49ec94cfe6374235b0e9adaa"    //这里是你的 appSecret，管理员在设置页可以查看
+
+    trackingNetworkEnabled true //开启网络请求跟踪功能(企业版)
+}
+//模块依赖
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile files('libs/butterknife-7.0.1.jar')
+    compile files('libs/eventbus.jar')
+    compile 'com.android.support:support-v4:23.1.1'
+    compile files('libs/glide-3.6.1.jar')
+    compile files('libs/okhttp/fastjson-1.1.46.android.jar')
+    compile files('libs/okhttp/okhttp-3.1.2.jar')
+    compile files('libs/okhttp/OkHttpFinal-2.0.3.jar')
+    compile files('libs/okhttp/okio-1.6.0.jar')
+    compile files('libs/okhttp/ToolsFinal-1.1.4-release.jar')
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.bugtags.library:bugtags-lib:latest.integration'
+    compile 'com.android.support:cardview-v7:23.1.1'
+    compile files('libs/andbase.jar')
+}
+
+//导入某个project：你的app是多模块的，假设有两个模块app和module-A,
+// 并且app模块是依赖module-A的，这时候我们就需要在app模块的build.gradle中的dependencies结点下配置依赖：
+//compile project(':module-A')
+//并且你需要在settings.gradle中把module-A模块包含进来：
+//include ':module-A',':app'
+//此外，这种情况下module-A模块是作为库存在的，因而它的build.gradle中的插件声明通常应该是这样的：
+//apply plugin: 'com.android.library'

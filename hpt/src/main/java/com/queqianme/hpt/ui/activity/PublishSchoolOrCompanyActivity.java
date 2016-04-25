@@ -2,14 +2,11 @@ package com.queqianme.hpt.ui.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseActivity;
+import com.queqianme.hpt.base.BaseActivity;
 import com.queqianme.hpt.utils.ActivityCollector;
-import com.queqianme.hpt.utils.Utils;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -18,8 +15,6 @@ import butterknife.OnClick;
  * Author:zhaojaiyu
  */
 public class PublishSchoolOrCompanyActivity extends BaseActivity {
-    @Bind(R.id.submit)
-    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +24,13 @@ public class PublishSchoolOrCompanyActivity extends BaseActivity {
         ActivityCollector.addActivity(this);
     }
 
-    @OnClick({R.id.submit})
+    @OnClick({R.id.publish_school_company_submit})
     public void Click(View view) {
-        Utils.intnet(this, MyShopActivity.class);
+        switch (view.getId()) {
+            case R.id.publish_school_company_submit:
+
+                break;
+        }
     }
 
     @Override

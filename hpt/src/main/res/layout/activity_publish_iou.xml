@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hpt="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_lightgray"
+    android:orientation="vertical"
+    tools:context=".ui.activity.PublishIOUActivity">
+
+    <com.queqianme.hpt.view.TitleBackView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:layout_below="@id/title_line"
+        hpt:titleText="发布借条" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/all_shop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/iou_getMoney"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x96"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/did_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_weight="1"
+                android:text="我要借" />
+
+            <TextView
+                android:id="@+id/iou_setMoney"
+                style="@style/did_edit_right"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4.5"
+                android:text="2000" />
+
+            <ImageView
+                android:layout_width="@dimen/x44"
+                android:layout_height="@dimen/x44"
+                android:layout_marginRight="@dimen/x30"
+                android:src="@mipmap/arow_right" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/x30"
+            android:background="@color/line_lightgray" />
+
+        <LinearLayout
+            android:id="@+id/iou_getRefundLong"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x96"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/did_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_weight="1"
+                android:text="借多久" />
+
+            <TextView
+                android:id="@+id/iou_setRefundLong"
+                style="@style/did_edit_right"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4.5"
+                android:text="30天(期)" />
+
+            <ImageView
+                android:layout_width="@dimen/x44"
+                android:layout_height="@dimen/x44"
+                android:layout_marginRight="@dimen/x30"
+                android:src="@mipmap/arow_right" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/x30"
+            android:background="@color/line_lightgray" />
+
+        <LinearLayout
+            android:id="@+id/iou_getInterestList"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x96"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/did_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_weight="1"
+                android:text="还款利息" />
+
+            <TextView
+                android:id="@+id/iou_setInterestList"
+                style="@style/did_edit_right"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4.5" />
+
+            <ImageView
+                android:layout_width="@dimen/x44"
+                android:layout_height="@dimen/x44"
+                android:layout_marginRight="@dimen/x30"
+                android:src="@mipmap/arow_right" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x80"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/x30">
+
+        <TextView
+            style="@style/text_999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每期应还: " />
+
+        <TextView
+            android:id="@+id/getRefundMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2070"
+            android:textColor="@color/text_orange"
+            android:textSize="@dimen/x30" />
+
+        <TextView
+            style="@style/text_999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x96"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/did_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_weight="1"
+                android:text="还款来源" />
+
+            <com.queqianme.hpt.view.EditTextWithDel
+                android:id="@+id/iou_payment"
+                style="@style/did_edit_right"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_weight="4.5"
+                android:hint="告诉对方你靠什么来还款,20字内"
+                android:maxLength="20" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/x30"
+            android:background="@color/line_lightgray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x96"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/did_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_weight="1"
+                android:text="借款目的" />
+
+            <com.queqianme.hpt.view.EditTextWithDel
+                android:id="@+id/iou_loanGoals"
+                style="@style/did_edit_right"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_weight="4.5"
+                android:hint="告诉大家你为什么借钱,20字内"
+                android:maxLength="20" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/x30"
+            android:background="@color/line_lightgray" />
+
+        <EditText
+            android:id="@+id/iou_loanCause"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/iou_submit"
+        style="@style/submit_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/x50"
+        android:text="下一步" />
+
+</LinearLayout>

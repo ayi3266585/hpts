@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 import com.ab.view.sliding.AbSlidingPlayView;
 import com.queqianme.hpt.R;
-import com.queqianme.hpt.bean.BaseActivity;
+import com.queqianme.hpt.base.BaseActivity;
 import com.queqianme.hpt.utils.ActivityCollector;
 import com.queqianme.hpt.utils.Utils;
 
@@ -20,20 +20,19 @@ import butterknife.ButterKnife;
  * 首次进入ViewPage广告
  */
 public class GuideActivity extends BaseActivity {
-    /**
-     * ViewPager
-     */
-    @Bind(R.id.abSlidingPlayView)
-    AbSlidingPlayView viewPager;
     private SharedPreferences settings;
     private SharedPreferences.Editor localEditor;
 
+    @Bind(R.id.abSlidingPlayView)
+    AbSlidingPlayView viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guide);
         ButterKnife.bind(this);
         ActivityCollector.addActivity(this);
+
 
         settings = this.getSharedPreferences("login", 0);
         localEditor = settings.edit();
