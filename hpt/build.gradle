@@ -40,6 +40,36 @@ android {
 
     }
 
+/// **********************指定apk输出目录*************************
+    build {
+        doLast {
+            def fileName = applicationId
+            def fromFile = "./build/outputs/apk/" + fileName
+            def intoFile = "/"
+
+
+            def time = new java.text.SimpleDateFormat("yyyyMMddHHmmss").format(new Date())
+            def channel = "site"
+
+
+            def appName = "${applicationId}_v${versionName}_${time}_${buildType}_${channel}.apk"
+
+            // copy --> rename
+            copy {
+                from fromFile
+                into intoFile
+
+
+                rename {
+                    appName
+                }
+            }
+
+
+            println("=====================build.doLast success.=========================")
+        }
+
+    }
     //默认配置，会同时应用到debug和release版本上
     defaultConfig {
         applicationId "com.queqianme.hpt"   //包名
@@ -63,7 +93,6 @@ android {
 
     }
 }
-
 //自动上传插件
 bugtags {
     appKey "273129c39f430e9919f4a22767f1cadc"  //这里是你的 appKey
